@@ -1,0 +1,75 @@
+format: jb-book
+root: intro
+parts: 
+  - caption: FOREWORD
+    chapters:
+    - file: content/introduction/audience
+      title: Introduction
+    - file: content/introduction/FAIR-principles
+      title: Introducing the FAIR Principles
+    - file: content/introduction/FIP
+      title: Introducing the FAIR Implementation Profiles
+    - file: content/introduction/additional-resources
+      title: Additional Resources
+    - file: content/introduction/glossary
+      title: Glossary
+  - caption: FAIRification Process
+    chapters:
+    - file: content/fairification/introduction
+      title: Introduction
+    - file: content/fairification/data-standardization
+      title: Data Standardization
+    - file: content/fairification/metadata-stadardization
+      title: Metadata Standardization
+    - file: content/fairification/assign-license
+      title: License Assignment
+    - file: content/fairification/publishing
+      title: Deploy and Publishing
+    - file: content/fairification/pids
+      title: Generating Persistent Unique Identifiers
+    - file: content/fairification/afterword
+      title: Additional Considerations
+    - file: content/fairification/assessment
+      title: Assessment
+  - caption: FAIR RECIPES
+    chapters:
+    - file: content/search-wizard
+      title: All Recipes in a Table
+  - caption: FAIRified Datasets
+    chapters:
+    - file: content/examples/rebipp
+      title: Brazilian Network on Plant-Pollinator Interactions datasets
+    - file: content/examples/globi
+      title: Global Biotic Interactions
+    - file: content/examples/sib-colombia
+      title: SIB-Colombia
+    - file: content/examples/hivetracks
+      title: HiveTracks
+    - file: content/examples/usda
+      title: USDA dataset
+    - file:  content/examples/argentina
+      title: Argentina datasets
+    - file: content/examples/kalro
+      title: KALRO datasets
+  - caption: AFTERWORD
+    chapters:
+    - file: content/afterword/afterword
+      title: Afterword
+  - caption: GLOSSARY
+    chapters:
+    - file: content/glossary/glossary
+      title: Glossary
+  - caption: JOIN US
+    chapters:
+    - file: content/joinus/community
+      title: Community
+      sections:
+      - file: content/joinus/people
+        title: Boards and contributors
+      - file: content/joinus/code_of_conduct
+        title: Code of conduct
+      - file: content/joinus/platform
+        title: Platform
+    - file: content/joinus/contribute
+      title: Contribute      
+
