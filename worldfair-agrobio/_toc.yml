@@ -1,18 +1,17 @@
 format: jb-book
 root: intro
-parts: 
+parts:
   - caption: FOREWORD
     chapters:
     - file: content/introduction/audience
-      title: Introduction
     - file: content/introduction/FAIR-principles
-      title: Introducing the FAIR Principles
-    - file: content/introduction/FIP
-      title: Introducing the FAIR Implementation Profiles
+    - file: content/introduction/standardization
+      sections:
+      - file: content/introduction/data-standardization
+      - file: content/introduction/metadata-standardization
+    - file: content/introduction/pids
     - file: content/introduction/additional-resources
-      title: Additional Resources
     - file: content/introduction/glossary
-      title: Glossary
   - caption: FAIRification Process
     chapters:
     - file: content/fairification/introduction
@@ -26,7 +25,7 @@ parts:
     - file: content/fairification/publishing
       title: Deploy and Publishing
     - file: content/fairification/pids
-      title: Generating Persistent Unique Identifiers
+      title: Generating Unique Persistent Identifiers
     - file: content/fairification/afterword
       title: Additional Considerations
     - file: content/fairification/assessment
@@ -71,5 +70,5 @@ parts:
       - file: content/joinus/platform
         title: Platform
     - file: content/joinus/contribute
-      title: Contribute      
+      title: Contribute
 

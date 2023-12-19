@@ -1,1 +1,1 @@
-# Heading: content/fairification/afterword.md
+# Afterword
