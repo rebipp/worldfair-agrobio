@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Data Standardization" href="data-standardization.html" />
-    <link rel="prev" title="Heading: content/introduction/glossary.md" href="../introduction/glossary.html" />
+    <link rel="prev" title="Glossary" href="../introduction/glossary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,8 +172,13 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">FOREWORD</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../introduction/audience.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/FAIR-principles.html">Introducing the FAIR Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/FIP.html">Introducing the FAIR Implementation Profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/FAIR-principles.html">The FAIR Principles</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/standardization.html">Standardization</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/data-standardization.html">Data Standardization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/metadata-standardization.html">Metadata Standardization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/pids.html">Unique Persistent Identifiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/additional-resources.html">Additional Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/glossary.html">Glossary</a></li>
 </ul>
@@ -183,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="metadata-stadardization.html">Metadata Standardization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assign-license.html">License Assignment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publishing.html">Deploy and Publishing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pids.html">Generating Persistent Unique Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pids.html">Generating Unique Persistent Identifiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="afterword.html">Additional Considerations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assessment.html">Assessment</a></li>
 </ul>
@@ -211,7 +217,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">JOIN US</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../joinus/community.html">Community</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../joinus/community.html">Community</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../joinus/people.html">Boards and contributors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../joinus/code_of_conduct.html">Code of conduct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../joinus/platform.html">Platform</a></li>
@@ -417,7 +423,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fairification-process">
 <h1>FAIRification process<a class="headerlink" href="#fairification-process" title="Permalink to this heading">#</a></h1>
-<p>The “FAIRification” is the process of transforming non-FAIR data into data which follows the four FAIR principles presented in chapter <span class="xref myst">FAIR Principles</span>.
+<p>The “FAIRification” is the process of transforming non-FAIR data into data which follows the four FAIR principles presented in chapter <a class="reference internal" href="../introduction/FAIR-principles.html#fair-principles"><span class="std std-ref">FAIR Principles</span></a>.
 The “FAIRification” process, as presented here, is composed by <code class="docutils literal notranslate"><span class="pre">four</span></code> steps (Figure 1):</p>
 <ul class="simple">
 <li><p><strong><a class="reference internal" href="data-standardization.html#data-std"><span class="std std-ref">Data standardization</span></a></strong>: is the transformation of original data (non-FAIR) using a <code class="docutils literal notranslate"><span class="pre">formal,</span> <span class="pre">accessible,</span> <span class="pre">shared,</span> <span class="pre">and</span> <span class="pre">broadly</span> <span class="pre">applicable</span> <span class="pre">language</span> <span class="pre">for</span> <span class="pre">knowledge</span> <span class="pre">representation</span></code> by the adotion of data <code class="docutils literal notranslate"><span class="pre">vocabularies</span> <span class="pre">that</span> <span class="pre">follow</span> <span class="pre">FAIR</span> <span class="pre">principles</span></code> and include <code class="docutils literal notranslate"><span class="pre">qualified</span> <span class="pre">references</span> <span class="pre">to</span> <span class="pre">other</span> <span class="pre">data</span></code>.</p></li>
@@ -480,7 +486,7 @@ The “FAIRification” process, as presented here, is composed by <code class="
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Heading: content/introduction/glossary.md</p>
+        <p class="prev-next-title">Glossary</p>
       </div>
     </a>
     <a class="right-next"

@@ -1,0 +1,35 @@
+.findable .admonition-title {
+    background-color: var(--pst-color-accent-bg) !important;
+}
+
+.findable .admonition-title:after {
+    color: var(--pst-color-accent) !important;
+    content: "F" !important
+}
+
+.accessible .admonition-title {
+    background-color: var(--pst-color-attention-bg) !important;
+}
+
+.accessible .admonition-title:after {
+    color: var(--pst-color-attention) !important;
+    content: "A" !important
+}
+
+.interoperable .admonition-title {
+    background-color: var(--pst-color-success-bg) !important;
+}
+
+.interoperable .admonition-title:after {
+    color: var(--pst-color-success) !important;
+    content: "I" !important
+}
+
+.reusable .admonition-title {
+    background-color: var(--pst-color-info-bg) !important;
+}
+
+.reusable .admonition-title:after {
+    color: var(--pst-color-info) !important;
+    content: "R" !important
+}

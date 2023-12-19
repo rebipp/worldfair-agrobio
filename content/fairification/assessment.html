@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Heading: content/fairification/assessment.md &#8212; Agricultural Biodiversity  Best Practice and Guidelines for Data FAIRification</title>
+    <title>FAIR Assessment &#8212; Agricultural Biodiversity  Best Practice and Guidelines for Data FAIRification</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Heading: content/search-wizard.md" href="../search-wizard.html" />
-    <link rel="prev" title="Heading: content/fairification/afterword.md" href="afterword.html" />
+    <link rel="prev" title="Afterword" href="afterword.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,8 +172,13 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">FOREWORD</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../introduction/audience.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/FAIR-principles.html">Introducing the FAIR Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/FIP.html">Introducing the FAIR Implementation Profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/FAIR-principles.html">The FAIR Principles</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/standardization.html">Standardization</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/data-standardization.html">Data Standardization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/metadata-standardization.html">Metadata Standardization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/pids.html">Unique Persistent Identifiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/additional-resources.html">Additional Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/glossary.html">Glossary</a></li>
 </ul>
@@ -183,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="metadata-stadardization.html">Metadata Standardization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assign-license.html">License Assignment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publishing.html">Deploy and Publishing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pids.html">Generating Persistent Unique Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pids.html">Generating Unique Persistent Identifiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="afterword.html">Additional Considerations</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Assessment</a></li>
 </ul>
@@ -211,7 +217,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">JOIN US</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../joinus/community.html">Community</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../joinus/community.html">Community</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../joinus/people.html">Boards and contributors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../joinus/code_of_conduct.html">Code of conduct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../joinus/platform.html">Platform</a></li>
@@ -401,7 +407,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Heading: content/fairification/assessment.md</h1>
+    <h1>FAIR Assessment</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -415,8 +421,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="heading-content-fairification-assessment-md">
-<h1>Heading: content/fairification/assessment.md<a class="headerlink" href="#heading-content-fairification-assessment-md" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="fair-assessment">
+<h1>FAIR Assessment<a class="headerlink" href="#fair-assessment" title="Permalink to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -455,7 +461,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Heading: content/fairification/afterword.md</p>
+        <p class="prev-next-title">Afterword</p>
       </div>
     </a>
     <a class="right-next"

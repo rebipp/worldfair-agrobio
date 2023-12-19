@@ -18,6 +18,6 @@ The "FAIRification" process, as presented here, is composed by `four` steps (Fig
 Although license information is part of the metadata, we have incorporated the license assignment as a separate step in the FAIRification process to highlight its importance. The absence of an explicit license may prevent others to reuse data, even if the data is intended to be open access.
 ```
 
-```{note} 
+```{note}
 Deploying and publishing your data is optional for non-open/private datasets. But metadata **MUST** be deployed and published.
 ```

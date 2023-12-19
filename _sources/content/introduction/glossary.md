@@ -1,1 +1,1 @@
-# Heading: content/introduction/glossary.md
+# Glossary
