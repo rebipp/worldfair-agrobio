@@ -10,9 +10,7 @@ The "FAIRification" process, as presented here, is composed by `four` steps (Fig
 - **Assign license**: choosing and assigning a lincense for the dataset and documenting it using `FAIR resources`.
 +++
 - **Deploy and Publishing data**: preparing data to be published in a `FAIR enabled data repository`.
-+++
-- **Generating Persistent Unique Identifiers**: minting `persistent uqnie identifiers` for (meta)data.
-+++
+
 
 ```{warning}
 Although license information is part of the metadata, we have incorporated the license assignment as a separate step in the FAIRification process to highlight its importance. The absence of an explicit license may prevent others to reuse data, even if the data is intended to be open access.
@@ -21,3 +19,4 @@ Although license information is part of the metadata, we have incorporated the l
 ```{note}
 Deploying and publishing your data is optional for non-open/private datasets. But metadata **MUST** be deployed and published.
 ```
+

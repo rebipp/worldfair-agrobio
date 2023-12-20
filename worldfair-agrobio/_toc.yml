@@ -5,10 +5,6 @@ parts:
     chapters:
     - file: content/introduction/audience
     - file: content/introduction/FAIR-principles
-    - file: content/introduction/standardization
-      sections:
-      - file: content/introduction/data-standardization
-      - file: content/introduction/metadata-standardization
     - file: content/introduction/pids
     - file: content/introduction/additional-resources
     - file: content/introduction/glossary
