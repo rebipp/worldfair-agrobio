@@ -6,46 +6,28 @@ parts:
     - file: content/introduction/audience
     - file: content/introduction/FAIR-principles
     - file: content/introduction/pids
+    - file: content/introduction/fairification
+      sections:
+      - file: content/fairification/metadata-stadardization
+      - file: content/fairification/data-standardization    
+      - file: content/fairification/assign-license
+      - file: content/fairification/publishing
+      - file: content/fairification/assessment
     - file: content/introduction/additional-resources
     - file: content/introduction/glossary
   - caption: FAIRification Process
-    chapters:
-    - file: content/fairification/introduction
-      title: Introduction
-    - file: content/fairification/data-standardization
-      title: Data Standardization
-    - file: content/fairification/metadata-stadardization
-      title: Metadata Standardization
-    - file: content/fairification/assign-license
-      title: License Assignment
-    - file: content/fairification/publishing
-      title: Deploy and Publishing
-    - file: content/fairification/pids
-      title: Generating Unique Persistent Identifiers
-    - file: content/fairification/afterword
-      title: Additional Considerations
-    - file: content/fairification/assessment
-      title: Assessment
-  - caption: FAIR RECIPES
-    chapters:
-    - file: content/search-wizard
-      title: All Recipes in a Table
+    chapters:                 
+    - file: content/fairification/globi
+    - file: content/fairification/rebipp
+    - file: content/fairification/gbif    
   - caption: FAIRified Datasets
     chapters:
     - file: content/examples/rebipp
-      title: Brazilian Network on Plant-Pollinator Interactions datasets
     - file: content/examples/globi
-      title: Global Biotic Interactions
-    - file: content/examples/sib-colombia
-      title: SIB-Colombia
+    - file: content/examples/ipt
     - file: content/examples/hivetracks
-      title: HiveTracks
     - file: content/examples/usda
-      title: USDA dataset
-    - file:  content/examples/argentina
-      title: Argentina datasets
-    - file: content/examples/kalro
-      title: KALRO datasets
+      title: USDA dataset    
   - caption: AFTERWORD
     chapters:
     - file: content/afterword/afterword

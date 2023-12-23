@@ -1,3 +1,5 @@
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://worldfair-agrobio.gitpages.com)
+
 # Agricultural Biodiversity  Best Practice and Guidelines for Data FAIRification
 
 Agricultural Biodiversity Standards, Best Practice and Guidelines Recommendations.

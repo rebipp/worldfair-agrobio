@@ -1,1 +1,1 @@
-# Heading: content/examples/globi.md
+# Global Biotic Interactions (GloBI)

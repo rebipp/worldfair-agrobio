@@ -33,9 +33,58 @@ The are different types of metadata which can overlap or complement each other, 
 
 - **Rights Metadata**: Rights metadata contains information regarding intellectual property rights, licensing, restrictions, and permissions associated with the data, ensuring compliance with legal and ethical considerations.
 
+(eml)=
 ## The Ecological Metadata Language
 
-## BioSchemas.org
+The [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/) {cite}`EML_2019`, offers a comprehensive vocabulary and a user-friendly XML markup syntax designed to document ecological data. Widely adopted within the earth and environmental sciences and increasingly utilized in various research fields, EML remains a community-driven standard. Its continual evolution caters to researchers seeking open documentation, preservation, and data sharing. EML comprises modules covering data package identification and citation, delineation of spatial, temporal, taxonomic, and thematic data extents, description of research methodologies, intricate data structure and content delineation, and precise data annotation using semantic vocabularies.
 
-## FAIRification
+The EML project is an open source, community oriented project dedicated to providing a high-quality metadata specification for describing data relevant to diverse disciplines that involve observational research like ecology, earth, and environmental science.
+
+It has been used by biodiversity community as metadata standard, including the [Global Biodiversity Information Facility (GBIF)](https://gbif.org) and [DataONE](https://dataone.org) (a network of data repositories). 
+
+The EML standard contains a large number of terms providing the elements to a rich description of datasets, their contents, strucuture and semantics. However, we can enumerate a minimum set of terms which MUST be present in the metadata of the biotic interactions datasets to meet the FAIR principles.
+
+## The mininum set of terms for biotic interactions
+
+In the metadata of biotic interactions datasets the follow term MUST be present:
+
+- `title`: a description of the resource that is being documented that is long enough to differentiate it from other similar resources.
+- dataset `creators`: 
+    - `individualName`: the full name of the people who created this resource,
+    - `organizationName`: the full name of the organizations who created this resource,
+    - `eletronicMailAddress`: the email addresses of the people who created this resource,
+-  `keywordSet`: keyword information that describes the resource,
+- license:
+    - `licenseName`: the official name of a license that applies to the data and metadata described in this metadata record. The name should match the name of a well-known license from the SPDX license vocabulary or a similar persistent vocabulary,
+    - `url`: the persistent URL for the license, typically a SPDX URL, or an official URL from another well-known license vocabulary.  Users should avoid using arbitrary URLs that are not the official URL for a license,
+
+The follow metadata elements are RECOMMENDED to be include in order to improve reusability of datasets:
+
+```{admonition} FAIR PRINCIPLE F2
+:class: findable
+(Meta)data include qualified references to other (meta)data
+```
+
+- `abstract`: a brief overview of the resource,
+- `intelectualRights`: intellectual property rights regarding usage and licensing of this resource,
+- `geographicCoverage`: geographic coverage information.
+- `temporalCoverage`: temporal coverage information,
+- `taxonomicCoverage`: taxonomic coverage information,
+- `methods`: the methods field documents scientific methods used in the collection of this dataset,
+- `referencePublication`: a citation to an additional publication that serves as an important reference for a dataset,
+- `literatureCited`: a citation to articles or products which were referenced in the dataset or its associated metadata.
+
+## Tools
+
+Generating EML files using XML or text editors can be complex and unproductive. For that reason, there some tools which cab help the creation of metadata description in EML:
+
+- [ezEML](https://ezeml.edirepository.org/eml/about): a form-based online application designed to streamline the creation of metadata in the Ecological Metadata Language (EML).
+- [EML](https://github.com/ropensci/eml): Ecological Metadata Language interface for R,
+- [python-eml](https://github.com/pieterprovoost/python-eml): a Python package containing dataclasses for the Ecological Metadata Language (EML) standard.
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
 
