@@ -3,3 +3,4 @@ matplotlib
 numpy
 ghp-import
 livereload
+docutils==0.17.1
