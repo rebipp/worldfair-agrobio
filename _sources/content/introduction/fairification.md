@@ -1,3 +1,4 @@
+(fairification)=
 # FAIRification process
 
 The "FAIRification" is the process of transforming non-FAIR data into data which follows the four FAIR principles presented in chapter [FAIR Principles](fair-principles).

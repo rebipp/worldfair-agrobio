@@ -73,4 +73,5 @@ REBIPP and GloBI template only simplify the process of data standardization. How
 ## References
 
 ```{bibliography}
+:filter: docname in docnames
 ```
