@@ -9,25 +9,24 @@ parts:
     - file: content/introduction/fairification
       sections:
       - file: content/fairification/metadata-stadardization
-      - file: content/fairification/data-standardization    
+      - file: content/fairification/data-standardization
       - file: content/fairification/assign-license
       - file: content/fairification/publishing
       - file: content/fairification/assessment
-    - file: content/introduction/additional-resources
-    - file: content/introduction/glossary
+    # - file: content/introduction/additional-resources
   - caption: FAIRification Process
-    chapters:                 
+    chapters:
     - file: content/fairification/globi
     - file: content/fairification/rebipp
-    - file: content/fairification/gbif    
-  - caption: FAIRified Datasets
-    chapters:
-    - file: content/examples/rebipp
-    - file: content/examples/globi
-    - file: content/examples/ipt
-    - file: content/examples/hivetracks
-    - file: content/examples/usda
-      title: USDA dataset    
+    - file: content/fairification/gbif
+  # - caption: FAIRified Datasets
+  #   chapters:
+  #   - file: content/examples/rebipp
+  #   - file: content/examples/globi
+  #   - file: content/examples/ipt
+  #   - file: content/examples/hivetracks
+  #   - file: content/examples/usda
+  #     title: USDA dataset
   - caption: AFTERWORD
     chapters:
     - file: content/afterword/afterword
@@ -43,10 +42,10 @@ parts:
       sections:
       - file: content/joinus/people
         title: Boards and contributors
-      - file: content/joinus/code_of_conduct
-        title: Code of conduct
-      - file: content/joinus/platform
-        title: Platform
-    - file: content/joinus/contribute
-      title: Contribute
+      # - file: content/joinus/code_of_conduct
+        # title: Code of conduct
+      # - file: content/joinus/platform
+        # title: Platform
+      - file: content/joinus/contribute
+        title: Contribute
 

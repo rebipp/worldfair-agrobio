@@ -1,3 +1,4 @@
+(metadata-std)=
 # Metadata stadardization
 
 ## FAIR Principles Met
@@ -40,7 +41,7 @@ The [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/) {cite}
 
 The EML project is an open source, community oriented project dedicated to providing a high-quality metadata specification for describing data relevant to diverse disciplines that involve observational research like ecology, earth, and environmental science.
 
-It has been used by biodiversity community as metadata standard, including the [Global Biodiversity Information Facility (GBIF)](https://gbif.org) and [DataONE](https://dataone.org) (a network of data repositories). 
+It has been used by biodiversity community as metadata standard, including the [Global Biodiversity Information Facility (GBIF)](https://gbif.org) and [DataONE](https://dataone.org) (a network of data repositories).
 
 The EML standard contains a large number of terms providing the elements to a rich description of datasets, their contents, strucuture and semantics. However, we can enumerate a minimum set of terms which MUST be present in the metadata of the biotic interactions datasets to meet the FAIR principles.
 
@@ -49,7 +50,7 @@ The EML standard contains a large number of terms providing the elements to a ri
 In the metadata of biotic interactions datasets the follow term MUST be present:
 
 - `title`: a description of the resource that is being documented that is long enough to differentiate it from other similar resources.
-- dataset `creators`: 
+- dataset `creators`:
     - `individualName`: the full name of the people who created this resource,
     - `organizationName`: the full name of the organizations who created this resource,
     - `eletronicMailAddress`: the email addresses of the people who created this resource,

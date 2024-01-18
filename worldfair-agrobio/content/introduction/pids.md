@@ -31,7 +31,7 @@ These identifiers are denoted as `locally unique` due to their exclusivity withi
 
 ## Producing globally unique identifiers
 
-Creating `globally unique identifiers` involves generating codes or labels that are guaranteed to be `distinct across different systems, locations, or contexts worldwide`. 
+Creating `globally unique identifiers` involves generating codes or labels that are guaranteed to be `distinct across different systems, locations, or contexts worldwide`.
 
 Several approaches ensure the generation of such identifiers.
 
@@ -60,7 +60,7 @@ Key facts about UUID:
 
 ```{code-cell} ipython3
 import uuid
-id = uuid.uuid4() 
+id = uuid.uuid4()
 
 print(id)
 ```
@@ -98,6 +98,7 @@ Key facts about DOI:
 - `resolvable` identifiers
 ```
 
+(content-hash-identifiers)=
 ### Content Hash Identifiers
 
 Content Hash Identifiers (CHIs) are identifiers generated based on the content of a digital object rather than arbitrary or structured identifiers like UUIDs or DOIs. These identifiers are derived from the content itself through a hashing algorithm, producing a `unique identifier` that represents the `content's characteristics`. The hash function generates a fixed-length alphanumeric string based on the input content. Even a minor change in the content would result in a significantly different hash value.
@@ -183,7 +184,7 @@ Where:
 
 ## Generating Resolvable URLs
 
-In FAIR data context, web resources require **uniqe**, **persistent**, and **resolvable** identifiers. To ensure persistence, these identifiers must adhere to the [RFC 3986 IETF standard](https://datatracker.ietf.org/doc/html/rfc3986) for URIs . This implies they must encompass the following components:
+In FAIR data context, web resources require **unique**, **persistent**, and **resolvable** identifiers. To ensure persistence, these identifiers must adhere to the [RFC 3986 IETF standard](https://datatracker.ietf.org/doc/html/rfc3986) for URIs . This implies they must encompass the following components:
 
 - `scheme`: `https`,
 - an `authority`: `www.example.com`
@@ -192,25 +193,65 @@ In FAIR data context, web resources require **uniqe**, **persistent**, and **res
 
 **Examples**:
 
- - Resolvable Hash Content Identifier:
-```
-ADD A RESOLVABLE HASH CONTENT IDENTIFIER EXAMPLES
-```
+- Resolvable Hash Content Identifier:
+  - `ADD A RESOLVABLE HASH CONTENT IDENTIFIER EXAMPLES`
 
-- Resolvable local identifier: 
+- Resolvable local identifier:
 
-[`https://arctos.database.museum/guid/MSB:Mamm:233627`](https://arctos.database.museum/guid/MSB:Mamm:233627)
+  - [`https://arctos.database.museum/guid/MSB:Mamm:233627`](https://arctos.database.museum/guid/MSB:Mamm:233627)
 
 - Resolvable globally identifier (UUID):
-[`https://treatment.plazi.org/id/0000C505-BB5D-484C-76BE-9AB6999DEB23`](https://treatment.plazi.org/id/0000C505-BB5D-484C-76BE-9AB6999DEB23)
+  - [`https://treatment.plazi.org/id/0000C505-BB5D-484C-76BE-9AB6999DEB23`](https://treatment.plazi.org/id/0000C505-BB5D-484C-76BE-9AB6999DEB23)
 
 - DOI:
 
-[`https://doi.org/10.5281/zenodo.6245874`](https://doi.org/10.5281/zenodo.6245874)
+  - [`https://doi.org/10.5281/zenodo.6245874`](https://doi.org/10.5281/zenodo.6245874)
 
 ## Identifier resolution
 
+The identifier resolution is related to the following FAIR principle:
+
+```{admonition} FAIR PRINCIPLE I1
+:class: accessible
+A1. (meta)data are retrievable by their identifier using a `standardized communications protocol`
+```
+
+A **PURL** is a `Persistent URL`, meaning that it provides a **permanent address to access a resource on the web**.
+
+To understand the notion of PURL, one needs to first get familiar with the notion of `url indirection` (also known as `url redirect` or `url forwarding`), which refers to the practice of providing a stable, static web address/URL, but setting it up so that it points to another content, which may be periodically modified.
+
+Identifier resolution is often enabled through `indirection` mechanism in which the process of identifying and locating a digital object involves an intermediate step to ensure persistence and reliability over time. In this context, `indirection` means introducing an additional layer or reference that allows for flexibility in managing the actual location or characteristics of the identified object.
+
+This process can be breakdonw in the following steps:
+
+1. **Identifier Resolution**: this is the process of `mapping an identifier` (such as a UUID or hash code) to the actual digital object it represents. In the context of data and digital resources, identifier resolution is crucial for finding and accessing the right information.
+2. **Enabling Persistence**: persistence in this context refers to the ability of the identifier to remain valid and associated with the same digital object over an extended period. Enabling persistence ensures that even if the object is moved, modified, or its location changes, the identifier remains functional and reliably points to the correct resource.
+3. **Indirection**: indirection introduces an `intermediary layer or reference` between the identifier and the actual digital object. Instead of directly using the identifier to access the object, the resolution process involves an intermediate step. This indirection layer adds flexibility and adaptability to the system, allowing changes to the object's location or characteristics without affecting the identifier itself.
+
+By using indirection in identifier resolution, the persistence of the identifier is maintained even if there are changes to the underlying infrastructure, storage location, or other attributes of the digital object. This approach enhances the longevity and stability of the identification system, making it more resilient to changes in the technological or organizational landscape.
+
+Common implementations of indirection in identifier resolution include the use of persistent identifier systems like `Digital Object Identifiers` (DOIs) or handles. These systems provide a level of abstraction that allows the actual location of the digital object to be managed separately from the identifier, contributing to the persistence and long-term accessibility of the identified resources.
+
+
+### Identifier Resolution services
+
+- [purl.org](https://purl.org): the PURL system is a service of the Internet Archive, which provides an interface to administer domain. For more information about the service, visit [https://archive.org/services/purl/help](https://archive.org/services/purl/help).
+- [w3ids](https://w3id.org/): permanent Identifiers for the Web. Secure, permanent URLs for your Web application that will stand the test of time:
+  - authority registration service
+  - resolution service
+  - redirection service: send a request to add a redirect to the public-perma-id@w3.org mailing list. Make sure to include the URL that you want on w3id.org, the URL that you want to redirect to, and the HTTP code that you want to use when redirecting. An administrator will then create the redirect for you.
+- [identifiers.org](https://identifiers.org/): Identifiers.org is a Resolution Service provides consistent access to life science data using [Compact Uniform Resource Identifiers](https://www.w3.org/TR/2010/NOTE-curie-20101216/), hosted by the EBI provides a resolution service, both as a web form and through the URL pattern{cite}`Juty2012`. Compact Identifiers consist of an assigned, unique prefix and a local provider designated accession number (prefix:accession). The resolving location of `Compact Identifiers` (CURIE) is determined using information that is stored in the Identifiers.org Registry. Datasets can register their namespace prefix together with their identifier pattern. The service can then be used in the same way as the DOI resolution service.
+
+- [Bioregistry](https://bioregistry.io/): is a **Resolution Service**, developed in a [GitHub repository](https://github.com/biopragmatics/bioregistry). Like [Identifiers.org](https://identifiers.org/) it has a registry, but also a registry of registries, and it imports data from Identifiers.org and [Name-to-Things](https://n2t.net/) but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be registered via [GitHub issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL https://bioregistry.io/ADW:Lycalopex_vetulus resolves to the [Animal Diversity Web](https://animaldiversity.org) (ADW) page [https://animaldiversity.org/accounts/Lycalopex_vetulus/](https://animaldiversity.org/accounts/Lycalopex_vetulus/). Bioregistry provides an API to query the registry itself.
+
 ## Conclusions
+
+This section has provided an overview of `globally unique and persistent identifier`{cite}`McMurry2017`, i.e. `FAIR principle F1`.
+
+However, it is essential to emphasize the centrality of `persistent identifiers in the generation` of **Linked Data** or **Linked Open Data** within this section. These processes heavily depend on three W3C standards: URI, RDF, and HTTP.
+
+But we can not conclude this section on persistent identifiers without stressing how central they are to the production of Linked Data or Linked Open Data, which rely on three W3C standards: [URI](https://tools.ietf.org/html/rfc1738), [RDF](https://www.w3.org/TR/rdf-concepts/) and HTTP.
+
 
 ## References
 

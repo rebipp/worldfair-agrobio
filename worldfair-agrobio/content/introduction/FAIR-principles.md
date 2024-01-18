@@ -5,17 +5,17 @@
 
 FAIR stands for Findable, Accessible, Interoperable, and Reusable, representing a paradigm shift in how data is managed, shared, and utilized across various domains.
 
-**Findability** encapsulates the notion that data should be easily discoverable by both humans and machines. 
+**Findability** encapsulates the notion that data should be easily discoverable by both humans and machines.
 
 **Accessibility** ensures that once data is found, it can be accessed, be it through open or controlled means, ensuring inclusivity and transparency in data availability.
 
-**Interoperability** focuses on the seamless interaction between different systems, enabling data exchange and integration across various platforms and domains. 
+**Interoperability** focuses on the seamless interaction between different systems, enabling data exchange and integration across various platforms and domains.
 
 Lastly, **Reusability** emphasizes the importance of ensuring that once accessed, data can be effectively reused for various purposes, maximizing its value and potential.
 
 These principles are not just theoretical concepts; they form a guiding framework, influencing data management practices, technological advancements, and policy implementations worldwide. By adhering to the FAIR principles, data becomes more than just information—it becomes a catalyst for innovation, collaboration, and informed decision-making.
 
-## The FAIR Guiding Principles 
+## The FAIR Guiding Principles
 
 :::{dropdown} Findability
 :open:
@@ -32,7 +32,7 @@ These principles are not just theoretical concepts; they form a guiding framewor
 :::
 
 
-:::{dropdown} Accessibilityy
+:::{dropdown} Accessibility
 :open:
 :color: warning
 **To be Accessible:**
