@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Brazilian Network on Plant-Pollinator Interactions (REBIPP)" href="rebipp.html" />
-    <link rel="prev" title="Glossary" href="../introduction/glossary.html" />
+    <link rel="prev" title="FAIR Assessment" href="assessment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,22 +182,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="assessment.html">FAIR Assessment</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/additional-resources.html">Additional Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/glossary.html">Glossary</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">FAIRification Process</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Global Biotic Interactions (GloBI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rebipp.html">Brazilian Network on Plant-Pollinator Interactions (REBIPP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gbif.html">Global Biodiversity Information Facility (GBIF)</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAIRified Datasets</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../examples/rebipp.html">Brazilian Network on Plant-Pollinator Interactions Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/globi.html">Global Biotic Interactions (GloBI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/ipt.html">GBIF Integrated Publishing Toolkit (IPT)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/hivetracks.html">Private dataset (HiveTracks)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/usda.html">USDA dataset</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">AFTERWORD</span></p>
 <ul class="nav bd-sidenav">
@@ -211,11 +201,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../joinus/community.html">Community</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../joinus/people.html">Boards and contributors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../joinus/code_of_conduct.html">Code of conduct</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../joinus/platform.html">Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../joinus/contribute.html">Contribute</a></li>
+
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../joinus/contribute.html">Contribute</a></li>
 </ul>
 
     </div>
@@ -388,7 +377,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -404,6 +395,21 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-github-repository">Creating a GitHub repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-metadata-using-eml">Creating a metadata using EML</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-data-and-column-mapping">Documenting data and column mapping</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-github-repository-for-globi">Preparing the GitHub repository for GloBI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persistent-identifier">Persistent Identifier</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -415,6 +421,103 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="global-biotic-interactions-globi">
 <h1>Global Biotic Interactions (GloBI)<a class="headerlink" href="#global-biotic-interactions-globi" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>The <a class="reference external" href="http://globalbioticinteractions.org/">Global Biotic Interactions</a> is an open-access platform that focuses on indexing and providing access to data about biotic interactions. These interactions can range from predation, parasitism, mutualism, to various other ecological relationships between organisms.</p>
+<p>GloBI aggregates data from various sources, including scientific literature, field observations, and existing datasets, and stores this information into a unified format. This standardized data enables researchers, ecologists, and anyone interested in biodiversity to access and analyze data about biotic interactions more easily.</p>
+<p>GloBI continuously scans existing data infrastructures and registries and tracks the biotic interactions data they make available. Found biotic interaction data are then resolved and integrated. So, rather than being a giant centralized repository of biotic interaction data, GloBI is more of a search index that helps to find existing biotic interaction datasets in their native cyber-habitat. For more information about how GloBI works, please visit the <a class="reference external" href="https://www.globalbioticinteractions.org/process">Data Integration Process</a> page.</p>
+<p>There many different forms to have a dataset indexed by GloBI, however, in this guide we will cover the method which covers the <a class="reference internal" href="../introduction/fairification.html#fairification"><span class="std std-ref">FAIRification process</span></a> described in this guide.</p>
+</section>
+<section id="creating-a-github-repository">
+<h2>Creating a GitHub repository<a class="headerlink" href="#creating-a-github-repository" title="Permalink to this heading">#</a></h2>
+<p>There are many different forms to make GloBI index a dataset as described in <a class="reference external" href="https://www.globalbioticinteractions.org/contribute">GloBI contribute page</a>. Here we will cover the this process using a GitHub repository, but other methods can also be used with adaptations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You need a GitHub account to create repositories. Go to <a class="reference external" href="https://github.com/signup">Signup page</a> and create an account if you do not have one yet.</p>
+</div>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/login">Log in</a> into the GitHub platform using your account credentials.</p></li>
+<li><p>Create a new GitHub repository by cloniong the <a class="reference external" href="https://github.com/globalbioticinteractions/template-dataset/generate">GloBI template repository</a></p></li>
+<li><p>Give a name to the repository. The repository will be created at your account namespace (<strong>Owner</strong>).</p></li>
+<li><p>Choose if you want to make your repository <strong>public</strong> or <strong>private</strong>. <strong>Private</strong> repositories <strong>are not</strong> accessible by others and can not be indexed by GloBI. You can choose to initially create a <strong>private</strong> repository and when you are ready you can make it <strong>public</strong>.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">repository</span></code> button.</p></li>
+<li><p>Upload the biotic interactions data file in text-delimited format (e.g. CSV, TSV) to the repository (<code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">file</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">Upload</span> <span class="pre">files</span></code>)</p></li>
+</ol>
+</section>
+<section id="creating-a-metadata-using-eml">
+<h2>Creating a metadata using EML<a class="headerlink" href="#creating-a-metadata-using-eml" title="Permalink to this heading">#</a></h2>
+<p>While GloBI does not require a metadata description using EML (Ecological Metadata Language) for data publication, adhering to FAIR principles necessitates the provision of access to metadata through the EML standard.</p>
+<p>EML documentation can be generated using the <a class="reference external" href="https://ezeml.edirepository.org/">ezeml</a> tool as described below:</p>
+<ol class="arabic simple">
+<li><p>First create a new account in <a class="reference external" href="https://ezeml.edirepository.org/eml/">ezeml</a></p></li>
+<li><p>Create a new EML document and add all information for the <strong>mininum set of terms for biotic interactions</strong> datasets (optionally also include the <strong>RECOMMENDED terms to improve reusability of datasets</strong>) described in the <a class="reference internal" href="metadata-stadardization.html#metadata-std"><span class="std std-ref">Metadata standardization</span></a>.</p></li>
+<li><p>Fill the description of <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">table</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span> <span class="pre">mapping</span></code> (see <a class="reference internal" href="#eml-dt-mapping"><span class="std std-ref">Documenting data and column mapping</span></a>).</p></li>
+<li><p>Export the EML file using the menu:  <code class="docutils literal notranslate"><span class="pre">Import/Export</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">EML</span> <span class="pre">file</span> <span class="pre">(XML)</span></code>.</p></li>
+<li><p>Save the EML (XML) file locally.</p></li>
+</ol>
+<section id="documenting-data-and-column-mapping">
+<span id="eml-dt-mapping"></span><h3>Documenting data and column mapping<a class="headerlink" href="#documenting-data-and-column-mapping" title="Permalink to this heading">#</a></h3>
+<p>In order to GloBI read and process the dataset the EML (XML) file must include the description of the <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">table</span></code>. In the <code class="docutils literal notranslate"><span class="pre">ezeml</span></code> tool this can be created using the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Tables</span></code> menu (<a class="reference internal" href="#ezeml-data-table"><span class="std std-numref">Fig. 4</span></a>). Change the field <code class="docutils literal notranslate"><span class="pre">Online</span> <span class="pre">Distribution</span> <span class="pre">URL</span></code> to point to file with biotic interactions data in the GitHub repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The direct URL of a file can be generate from GitHub using the <code class="docutils literal notranslate"><span class="pre">Raw</span></code> button in the file preview page (<a class="reference internal" href="#raw"><span class="std std-numref">Fig. 3</span></a>)</p>
+</div>
+<figure class="align-default" id="raw">
+<img alt="../../_images/raw.png" src="../../_images/raw.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Generate direct URL for a file in GitHub by clickin in the <code class="docutils literal notranslate"><span class="pre">Raw</span></code> button.</span><a class="headerlink" href="#raw" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The original data table with biotic interaction records must be uploaded using CSV file and then the columns mapping can be created using <a class="reference external" href="https://github.com/globalbioticinteractions/template-dataset?tab=readme-ov-file#data-format-and-dictionary">GloBI vocabulary</a> as <code class="docutils literal notranslate"><span class="pre">attribute</span> <span class="pre">name</span></code>. First you need to load a text-delimited file into <code class="docutils literal notranslate"><span class="pre">ezml</span></code> (<a class="reference internal" href="#ezeml-data-table"><span class="std std-numref">Fig. 4</span></a>). After successfull upload the file, the original columns can be mapped to <code class="docutils literal notranslate"><span class="pre">GloBI</span> <span class="pre">vocabulary</span></code> and Darwin Core standard.</p>
+<p>To edit the columns mapping click on <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Column</span> <span class="pre">Properties</span></code> button in the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Table</span></code> page (<a class="reference internal" href="#ezeml-data-table"><span class="std std-numref">Fig. 4</span></a>).</p>
+<figure class="align-default" id="ezeml-data-table">
+<img alt="../../_images/ezeml-data-table.png" src="../../_images/ezeml-data-table.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Loading a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">table</span></code> in <code class="docutils literal notranslate"><span class="pre">ezeml</span></code> tool.</span><a class="headerlink" href="#ezeml-data-table" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Columns</span></code> page, select the column which you want to map and click on the <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Properties</span></code> button (<a class="reference internal" href="#ezeml-columns"><span class="std std-numref">Fig. 5</span></a>).</p>
+<figure class="align-default" id="ezeml-columns">
+<img alt="../../_images/ezeml-columns.png" src="../../_images/ezeml-columns.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">Columns</span> <span class="pre">Properties</span></code> page in <code class="docutils literal notranslate"><span class="pre">ezeml</span></code> tool. To edit the mapping of a specific column click on <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Properties</span></code> button.</span><a class="headerlink" href="#ezeml-columns" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the column properties page you MUST fill the fields: <code class="docutils literal notranslate"><span class="pre">Name</span></code> and <code class="docutils literal notranslate"><span class="pre">Definiion</span></code> as following (<a class="reference internal" href="#ezeml-mapping"><span class="std std-numref">Fig. 6</span></a>):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Name</span></code> with a term from the <code class="docutils literal notranslate"><span class="pre">GloBI</span> <span class="pre">vocabulary</span></code> (if available)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Definition</span></code> with the URL (ID) of the term in the DwC standard or any other standard/ontology in order to provide a machine readble definition for the column</p></li>
+</ul>
+<figure class="align-default" id="ezeml-mapping">
+<img alt="../../_images/ezeml-mapping.png" src="../../_images/ezeml-mapping.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Column mapping to <a class="reference external" href="https://github.com/globalbioticinteractions/template-dataset?tab=readme-ov-file#data-format-and-dictionary">Globi vocabulary</a> and Darwin Core standard. The fields <code class="docutils literal notranslate"><span class="pre">Name</span></code> and <code class="docutils literal notranslate"><span class="pre">Definition</span></code> MUST be provided.</span><a class="headerlink" href="#ezeml-mapping" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When all columns have been mapped to <code class="docutils literal notranslate"><span class="pre">GloBI</span> <span class="pre">vocabulary</span></code> or to DwC and PPI, continue with metadata description, exporting the EML (XML) file at the end.</p>
+</section>
+</section>
+<section id="preparing-the-github-repository-for-globi">
+<h2>Preparing the GitHub repository for GloBI<a class="headerlink" href="#preparing-the-github-repository-for-globi" title="Permalink to this heading">#</a></h2>
+<p>The new created repository will looks like shown in Figure X. There are four files that you need to edit/create to enable GloBI to find and index your data:</p>
+<ol class="arabic simple">
+<li><p><strong><a class="reference external" href="http://README.md">README.md</a></strong>: a markdown file where you can freely describe your dataset in human readable form.</p></li>
+<li><p><strong>interactions.tsv</strong>: the biotic interactions records in TSV file format. You can choose to delete this file or using another text format (e.g. CSV, TXT).</p></li>
+<li><p><strong>globi.json</strong>: this file guides GloBI in how to find, read and process the (meta)data of your dataset, but since we are using the EML to describe the dataset this file can be renamed to <code class="docutils literal notranslate"><span class="pre">globi.json.disabled</span></code>. Renaming the file will still enable GloBI to find the repository but it will use the <code class="docutils literal notranslate"><span class="pre">eml.xml</span></code> file instead of the <code class="docutils literal notranslate"><span class="pre">globi.json</span></code> to process the interaction data.</p></li>
+<li><p><strong>eml.xml</strong>: upload the EML (XML) file created using the <a class="reference external" href="https://ezeml.edirepository.org/eml/">ezml</a> tool to the repository. <strong>NOTE:</strong> make sure that the <code class="docutils literal notranslate"><span class="pre">eml.xml</span></code> file includes the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Table</span></code> description, otherwise GloBI will not be able to process the dataset (see <a class="reference internal" href="#eml-dt-mapping"><span class="std std-ref">Documenting data and column mapping</span></a>).</p></li>
+</ol>
+</section>
+<section id="persistent-identifier">
+<h2>Persistent Identifier<a class="headerlink" href="#persistent-identifier" title="Permalink to this heading">#</a></h2>
+<p>GloBI provided PID using <a class="reference internal" href="../introduction/pids.html#content-hash-identifiers"><span class="std std-ref">Content Hash Idenfiers</span></a> for all datasets published in the platform. For example the URL <a class="github reference external" href="https://github.com/globalbioticinteractions/calvalheiro2023/archive/20cc192510e0abb7c982a50502354fa74d504cfa.zip">globalbioticinteractions/calvalheiro2023</a> serves as a PID for the datasets hosted at <a class="github reference external" href="https://github.com/globalbioticinteractions/carvalheiro2023">globalbioticinteractions/carvalheiro2023</a>.</p>
+<p>Altenrativelly, GloBI can generate <code class="docutils literal notranslate"><span class="pre">DOI</span></code> by uploading a copy of the dataset from GitHub into <a class="reference external" href="https://zenodo.org">Zenodo</a>. To create a <code class="docutils literal notranslate"><span class="pre">PID</span></code> from GitHub you MUST create a <code class="docutils literal notranslate"><span class="pre">realease</span></code> of your repository (<a class="reference internal" href="#pid-release"><span class="std std-numref">Fig. 7</span></a>), after creating a <code class="docutils literal notranslate"><span class="pre">release</span></code> the generated data package will be uploaded to Zenodo and a DOI will be also generated.</p>
+<figure class="align-default" id="pid-release">
+<img alt="../../_images/release.png" src="../../_images/release.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Generate a <code class="docutils literal notranslate"><span class="pre">release</span></code> from GitHub repository in order to get a <code class="docutils literal notranslate"><span class="pre">DOI</span></code> from <code class="docutils literal notranslate"><span class="pre">Zendo</span></code>.</span><a class="headerlink" href="#pid-release" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,12 +551,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../introduction/glossary.html"
+       href="assessment.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Glossary</p>
+        <p class="prev-next-title">FAIR Assessment</p>
       </div>
     </a>
     <a class="right-next"
@@ -471,6 +574,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-github-repository">Creating a GitHub repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-metadata-using-eml">Creating a metadata using EML</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-data-and-column-mapping">Documenting data and column mapping</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-github-repository-for-globi">Preparing the GitHub repository for GloBI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persistent-identifier">Persistent Identifier</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
