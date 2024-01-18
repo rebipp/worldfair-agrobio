@@ -23,9 +23,9 @@ Metadata should be accessible even when the data is no longer available
 
 Deploying and publishing data refers to the process of making data available, accessible, and usable within a particular system. It involves taking raw data and after transformations, which involves (meta)data standardization, data annotation and license assignment, integrating it into a platform where it can be utilized effectively.
 
-Depending of the platform choose to publishing data, the deployment process may differ and involve differet tools and steps for data preparation. Regarding biotic interactions data, there are some platforms which are best suitable to integrade such data. Each one of these platforms have their own methods for data publishing, which are described in the [FAIRified Datasets](fairified) chapter.
+Depending of the platform choose to publishing data, the deployment process may differ and involve differet tools and steps for data preparation. Regarding biotic interactions data, there are some platforms which are best suitable to integrade such data. Each one of these platforms have their own methods for data publishing, which are described in the `FAIRification Process` chapter.
 
-After choosing the platform where you want to publish your dataset, you can follow one of the examples given in [FAIRified Datasets](fairified) to learn how to prepare and publish your own dataset in the choose platform.
+After choosing the platform where you want to publish your dataset, you can follow one of the guides given in `FAIRification Process` chapter to learn how to prepare and publish your own dataset in the choose platform.
 
 ## Global Biotic Interactions (GloBI)
 
