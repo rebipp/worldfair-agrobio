@@ -98,19 +98,21 @@ Key facts about DOI:
 - `resolvable` identifiers
 ```
 
-(content-hash-identifiers)=
-### Content Hash Identifiers
+(content-identifiers)=
+### Content Identifiers
 
-Content Hash Identifiers (CHIs) are identifiers generated based on the content of a digital object rather than arbitrary or structured identifiers like UUIDs or DOIs. These identifiers are derived from the content itself through a hashing algorithm, producing a `unique identifier` that represents the `content's characteristics`. The hash function generates a fixed-length alphanumeric string based on the input content. Even a minor change in the content would result in a significantly different hash value.
+Content Identifiers are identifiers generated based on the content of a digital object rather than arbitrary or structured identifiers like UUIDs or DOIs. These identifiers are derived from the content itself through a hashing algorithm, producing a `unique identifier` that represents the `content's characteristics`. The hash function generates a fixed-length alphanumeric string based on the input content. Even a minor change in the content would result in a significantly different hash value.
 
-{cite:t}`elliott2020` propose a method for creating cryptographic hashing using SHA256 algorithm to generate content-based identifiers that can reliably reference datasets.
+{cite:t}`elliott2020,elliott2023` propose a method for creating cryptographic hashing using SHA256 algorithm to generate content-based identifiers that can reliably reference datasets.
 
 ```{note} Note
-Key facts about CHIs:
+Key facts about Content Identifiers:
 - `no centralized authority` is required to administer them,
-- `content dependent`,
-- geration can be `automated`,
-- `non resolvable`
+- `underlying technology widely used for decades secure content distribution`
+- `content format independent`,
+- `points to a single version of immutable digital content`,
+- generation can be `automated`,
+- `verifiable`, the authenticity of the resolved content can be verified algorithmically and independently.
 ```
 
 - Generation in `Python`:
@@ -159,7 +161,7 @@ For instance, a resolvable DOI (Digital Object Identifier) allows you to access 
 
 Resolvability is a critical attribute of identifiers, especially in digital systems, as it ensures that using the identifier leads to the intended digital object or resource, allowing for seamless access, retrieval, or interaction with the identified content.
 
-The globally unique identifiers created for the `web` rely on the Uniform Resource Locators (`URL`) and on the Hypertext Transfer Protocol (`HTTP(S)`) .
+The globally unique identifiers created for the `web` typically rely on the Uniform Resource Locators (`URL`), Dynamic Name Services (`DNS`, when using hostnames instead of ip addresses), Public Key Infrastructure (e.g., to enable the "s" in https) and on the Hypertext Transfer Protocol (`HTTP`) .
 
 ## Uniform Resource Locators (URLs)
 
@@ -193,10 +195,13 @@ In FAIR data context, web resources require **unique**, **persistent**, and **re
 
 **Examples**:
 
-- Resolvable Hash Content Identifier:
-  - `ADD A RESOLVABLE HASH CONTENT IDENTIFIER EXAMPLES`
+- Resolvable Content Identifiers:
+  - [`https://linker.bio/hash://sha256/f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d.pdf`](https://linker.bio/hash://sha256/f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d.pdf) (a scientific paper)
+  - [`https://archive.softwareheritage.org/api/1/content/sha256:f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d/raw/`](https://archive.softwareheritage.org/api/1/content/sha256:f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d/raw/) (a scientific paper)
+  - [`https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg`](https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg) (a picure of a 🐇 (_Oryctolagus cuniculus_))
+  - [`https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/`](https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/) (a picure of a 🐇 (_Oryctolagus cuniculus_))
 
-- Resolvable local identifier:
+- Resolvable globally unique identifier (GUID) identifier:
 
   - [`https://arctos.database.museum/guid/MSB:Mamm:233627`](https://arctos.database.museum/guid/MSB:Mamm:233627)
 
@@ -243,7 +248,8 @@ Common implementations of indirection in identifier resolution include the use o
 - [identifiers.org](https://identifiers.org/): Identifiers.org is a Resolution Service provides consistent access to life science data using [Compact Uniform Resource Identifiers](https://www.w3.org/TR/2010/NOTE-curie-20101216/), hosted by the EBI provides a resolution service, both as a web form and through the URL pattern{cite}`Juty2012`. Compact Identifiers consist of an assigned, unique prefix and a local provider designated accession number (prefix:accession). The resolving location of `Compact Identifiers` (CURIE) is determined using information that is stored in the Identifiers.org Registry. Datasets can register their namespace prefix together with their identifier pattern. The service can then be used in the same way as the DOI resolution service.
 
 - [Bioregistry](https://bioregistry.io/): is a **Resolution Service**, developed in a [GitHub repository](https://github.com/biopragmatics/bioregistry). Like [Identifiers.org](https://identifiers.org/) it has a registry, but also a registry of registries, and it imports data from Identifiers.org and [Name-to-Things](https://n2t.net/) but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be registered via [GitHub issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL https://bioregistry.io/ADW:Lycalopex_vetulus resolves to the [Animal Diversity Web](https://animaldiversity.org) (ADW) page [https://animaldiversity.org/accounts/Lycalopex_vetulus/](https://animaldiversity.org/accounts/Lycalopex_vetulus/). Bioregistry provides an API to query the registry itself.
-
+- [linker.bio](https://linker.bio): is an example of a content identifier resolver. Linker.bio uses Preston, a biodiversity data tracker, {cite:t}`elliott2020,elliott2023` to redirect content identifiers using a URL scheme: https://linker.bio/hash://[hashtype]/[contentid] with examples available in section "Resolvable Identifiers." Linker.bio acts as a gateway to existing infrastructures like: [DataVerse](https://dataverse.org), [DataOne](https://dataone.org), [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page), [Zenodo](https://zenodo.org), [Software Heritage Library](https://softwareheritage.org). Anyone with the skills to setup a webserver can run their own independent content-based resolver, so copies of linker.bio can be deployed when needed.
+ 
 ## Conclusions
 
 This section has provided an overview of `globally unique and persistent identifier`{cite}`McMurry2017`, i.e. `FAIR principle F1`.
