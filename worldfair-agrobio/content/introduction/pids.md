@@ -194,7 +194,10 @@ In FAIR data context, web resources require **unique**, **persistent**, and **re
 **Examples**:
 
 - Resolvable Hash Content Identifier:
-  - `ADD A RESOLVABLE HASH CONTENT IDENTIFIER EXAMPLES`
+  - [`https://linker.bio/hash://sha256/f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d.pdf`](https://linker.bio/hash://sha256/f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d.pdf) (a scientific paper)
+  - [`https://archive.softwareheritage.org/api/1/content/sha256:f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d/raw/`](https://archive.softwareheritage.org/api/1/content/sha256:f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d/raw/) (a scientific paper)
+  - [`https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg`](https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg) (a picure of a 🐇 (_Oryctolagus cuniculus_))
+  - [`https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/`](https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/) (a picure of a 🐇 (_Oryctolagus cuniculus_))
 
 - Resolvable local identifier:
 
