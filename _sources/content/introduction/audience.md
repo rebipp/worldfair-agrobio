@@ -34,14 +34,14 @@ The document *Guidelines and Recommendations for Publishing Agricultural-related
 
 - [José Augusto Salim](https://orcid.org/0000-0002-8675-7068), University of Campinas, Brazil
 - [Debora Pignatari Drucker](https://orcid.org/0000-0003-4177-1322), Embrapa Agricultura Digital, Brazil
-- Rocío A. González-Vaquero, Facultad de Agronomía, Universidad de Buenos Aires, Argentina
+- [Rocío A. González-Vaquero](https://orcid.org/0000-0001-7754-1815), Facultad de Agronomía, Universidad de Buenos Aires, Argentina
 - [Filipi Miranda Soares](https://www.wikidata.org/wiki/Q111524976), Universidade de São Paulo, Brazil
 - [Jorrit H. Poelen](https://orcid.org/0000-0003-3138-4118), Global Biotic Interactions, United States
 
 
 ## Suggested citation
 
-Salim, JA; Drucker, DP; González-Vaquero, RA; Soares, FM; Poelen, JH (2023) Guidelines and Recommendations for Publishing Agricultural-related pollinator data, v1.0. WorldFAIR Initiative.
+Salim, JA; Drucker, DP; González-Vaquero, RA; Soares, FM; Poelen, JH (2023) Guidelines and Recommendations for Publishing Agricultural-related pollinator data, v1.0. WorldFAIR Initiative. [https://rebipp.github.io/worldfair-agrobio](https://rebipp.github.io/worldfair-agrobio)
 
 ## Persistent URI
 
