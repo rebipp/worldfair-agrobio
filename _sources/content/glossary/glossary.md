@@ -24,7 +24,7 @@ HTTP
     Hypertext Transfer Protocol is a communication protocol used by the internet
 
 Interoperability
-    The property of a resource to work together with other software agents
+    The ability of different software systems to exchange and seamlessly process shared data
 
 JSON
     Javascript Online Notation, a syntax for data structures and used to transmit data objects consisting of attribute-value pairs
