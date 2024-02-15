@@ -3,7 +3,7 @@
 
 ## Introduction
 
-FAIR stands for Findable, Accessible, Interoperable, and Reusable, representing a paradigm shift in how data is managed, shared, and utilized across various domains.
+FAIR stands for Findable, Accessible, Interoperable, and Reusable, representing a set of widely agreed principles for data management, sharing, and reuse across various domains.
 
 **Findability** encapsulates the notion that data should be easily discoverable by both humans and machines.
 
@@ -64,7 +64,7 @@ These principles are not just theoretical concepts; they form a guiding framewor
 (reusable-r1)=
 - R1. meta(data) are `richly described with a plurality of accurate and relevant attributes`
     - R1.1. (meta)data are released with a `clear and accessible data usage license`
-    - R1.2. (meta)data are associated with detailed `provenance`
+    - R1.2. (meta)data are associated with detailed {term}`provenance`
     - R1.3. (meta)data meet domain-relevant `community standards`
 :::
 

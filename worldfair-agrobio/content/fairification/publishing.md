@@ -11,7 +11,7 @@
 
 ```{admonition} FAIR PRINCIPLE A1
 :class: accessible
-(Meta)data are retrievable by their identifier using a standardised communication protocol
+(Meta)data are retrievable by their identifier using a standardized communication protocol
 ```
 
 ```{admonition} FAIR PRINCIPLE A2
@@ -23,7 +23,7 @@ Metadata should be accessible even when the data is no longer available
 
 Deploying and publishing data refers to the process of making data available, accessible, and usable within a particular system. It involves taking raw data and after transformations, which involves (meta)data standardization, data annotation and license assignment, integrating it into a platform where it can be utilized effectively.
 
-Depending of the platform choose to publishing data, the deployment process may differ and involve differet tools and steps for data preparation. Regarding biotic interactions data, there are some platforms which are best suitable to integrade such data. Each one of these platforms have their own methods for data publishing, which are described in the `FAIRification Process` chapter.
+Depending of the platform choose to publishing data, the deployment process may differ and involve different tools and steps for data preparation. Regarding biotic interactions data, there are some platforms which are best suitable to integrate such data. Each one of these platforms have their own methods for data publishing, which are described in the `FAIRification Process` chapter.
 
 After choosing the platform where you want to publish your dataset, you can follow one of the guides given in `FAIRification Process` chapter to learn how to prepare and publish your own dataset in the choose platform.
 
@@ -35,7 +35,7 @@ GloBI aggregates data from various sources, including scientific literature, fie
 
 GloBI continuously scans existing data infrastructures and registries and tracks the biotic interactions data they make available. Found biotic interaction data are then resolved and integrated. So, rather than being a giant centralized repository of biotic interaction data, GloBI is more of a search index that helps to find existing biotic interaction datasets in their native cyber-habitat. For more information about how GloBI works, please visit the [Data Integration Process](https://www.globalbioticinteractions.org/process) page.
 
-There many different forms to have a dataset indexed by GloBI, however, in this guide we will cover the method which covers the [FAIRification process](fairification) described in this guide.
+There are many different forms to have a dataset indexed by GloBI, however, in this guide we will cover the method which covers the [FAIRification process](fairification) described in this guide.
 
 ## Brazilian Network on Plant-Pollinator Interactions (REBIPP)
 
@@ -43,7 +43,7 @@ The [Brazilian Network on Plant-Pollinator Interactions](https://db.rebipp.org.b
 
 REBIPP provides a platform to retrieve and publish datasets on interactions between plants and their floral visitors, such as pollinators.
 
-Data publication in REBIPP involves filling data into a spreadhsheet with predefiined format (template). This template includes:
+Data publication in REBIPP involves filling data into a spreadsheet with predefined format (template). This template includes:
 
 - A sheet for metadata description which follows the EML standard,
 - A sheet for interaction records between plants and animals following the Darwin Core standard,
@@ -58,9 +58,9 @@ At this moment REBIPP can not provide [Unique Persistent Identifiers](intro-pids
 
 The [Global Biodiversity Information Facility](https://gbif.org) is an international network and open-access data infrastructure that aims to facilitate free and open access to biodiversity data from around the world.
 
-For data publishing GBIF provides a tool called [Integrate Publishing Toolkit](https://www.gbif.org/ipt) (IPT) which after installed into a GBIF newtwork node, it can share biodiversity data stored in node's databases or dataset created by users who have access to the IPT web interface.
+For data publishing GBIF provides a tool called [Integrate Publishing Toolkit](https://www.gbif.org/ipt) (IPT) which after installed into a GBIF network node, it can share biodiversity data stored in node's databases or dataset created by users who have access to the IPT web interface.
 
-Biotic interactions data can be published in GBIF, even though GBIF is not indexing this kind of that at the moment. It means that, despite it is possible to find and access the published datasets, GBIF does not offer a search mechanism for biotic interactions. It does not fully acccomplishes with the [FAIR Principle F4](findable-f4).
+Biotic interactions data can be published in GBIF, even though GBIF is not indexing this kind of data at the moment. It means that, despite it is possible to find and access the published datasets, GBIF does not offer a search mechanism for biotic interactions. It does not fully accomplishes with the [FAIR Principle F4](findable-f4).
 
 ```{admonition} Attention
 :class: attention

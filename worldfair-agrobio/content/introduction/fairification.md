@@ -2,13 +2,13 @@
 # FAIRification process
 
 The "FAIRification" is the process of transforming non-FAIR data into data which follows the four FAIR principles presented in chapter [FAIR Principles](fair-principles).
-The "FAIRification" process, as presented here, is composed by `four` steps (Figure 1):
+The "FAIRification" process, as presented here, is composed by `four` steps:
 
 - **[Metadata standardization](metadata-std)**: is the description of metadata using a `formal, accessible, shared, and broadly applicable language for knowledge representation` by adoption of metadata standards.
 +++
-- **[Data standardization](data-std)**: is the transformation of original data (non-FAIR) using a `formal, accessible, shared, and broadly applicable language for knowledge representation` by the adotion of data `vocabularies that follow FAIR principles` and include `qualified references to other data`.
+- **[Data standardization](data-std)**: is the transformation of original data (non-FAIR) using a `formal, accessible, shared, and broadly applicable language for knowledge representation` by the adoption of data `vocabularies that follow FAIR principles` and include `qualified references to other data`.
 +++
-- **[Assign license](license-assign)**: choosing and assigning a lincense for the dataset and documenting it using `FAIR resources`.
+- **[Assign license](license-assign)**: choosing and assigning a license for the dataset and documenting it using `FAIR resources`.
 +++
 - **[Deploy and Publishing data](publishing)**: preparing data to be published in a `FAIR enabled data repository` and generating a `persistent unique identifier` for published datasets.
 

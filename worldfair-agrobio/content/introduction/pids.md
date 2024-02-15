@@ -27,7 +27,7 @@ The fundamental principle is that identifiers must be distinct, establishing an 
 
 In isolated systems that operate independently, the likelihood of identifier collision is null. However, within such closed environments, distinct systems may generate local identifiers that, despite being identical, reference entirely separate entities. In fact, this happens all the time.
 
-These identifiers are denoted as `locally unique` due to their exclusivity within their respective systems. However, their uniqueness is not guaranteed when compared across all existing systems, thereby lacking `global uniqueness`.
+These identifiers are denoted as `locally unique` due to their exclusivity within their respective systems. However, their uniqueness is not guaranteed when compared across all existing systems, thereby lacking `global uniqueness`. The scenario, where the same `identifier` (within global context) is assigned to two or more different entities or objects is called **identifier collision**.Each `global unique identifier` is meant to be unique across the entire system or network. This **collision** results in ambiguity and potential errors, as systems rely on the identifiers to uniquely identify and differentiate between entities (e.g datasets). Such collisions can lead to data corruption, system failures, or incorrect processing of information, particularly in distributed systems or databases where unique identifiers are crucial for maintaining data integrity and consistency. Resolving collisions typically involves revising the identifier generation process or implementing mechanisms to detect and mitigate conflicts.
 
 ## Producing globally unique identifiers
 
@@ -45,15 +45,15 @@ UUIDs are `128-bit numbers`, allowing for a theoretical total of `2^128 (approxi
 
 For context, generating one billion UUIDs per second would take over 100 billion years to exhaust the potential space of unique UUIDs. This demonstrates the minuscule likelihood of collision when using properly generated UUIDs.
 
-The [RFC4122 specifications](https://tools.ietf.org/html/rfc4122), published by the [Internet Engineering Task Force](https://www.ietf.org/) (IETF), outlines the structure, generation methods, and different variants of UUIDs. It provides guidelines for creating UUIDs to ensure uniqueness across across both space and time.
+The [RFC4122 specifications](https://tools.ietf.org/html/rfc4122), published by the [Internet Engineering Task Force](https://www.ietf.org/) (IETF), outlines the structure, generation methods, and different variants of UUIDs. It provides guidelines for creating UUIDs to ensure uniqueness across both space and time.
 
 ```{note} Note
 Key facts about UUID:
 - no `centralized authority` is required to administer them,
 - `content independent`, UUIDs do not carry information or context about the content it identifies,
-- geration can be `automated`,
+- generation can be `automated`,
 - `non resolvable`
-- completly `semantic free (opaque) identifier`
+- completely `semantic free (opaque) identifier`
 ```
 
 - Generation of UUID using `Python`:
@@ -161,7 +161,7 @@ For instance, a resolvable DOI (Digital Object Identifier) allows you to access 
 
 Resolvability is a critical attribute of identifiers, especially in digital systems, as it ensures that using the identifier leads to the intended digital object or resource, allowing for seamless access, retrieval, or interaction with the identified content.
 
-The globally unique identifiers created for the `web` typically rely on the Uniform Resource Locators (`URL`), Dynamic Name Services (`DNS`, when using hostnames instead of ip addresses), Public Key Infrastructure (e.g., to enable the "s" in https) and on the Hypertext Transfer Protocol (`HTTP`) .
+The globally unique identifiers created for the `web` typically rely on the Uniform Resource Locators (`URL`), Dynamic Name Services (`DNS`, when using hostname instead of ip address), Public Key Infrastructure (e.g., to enable the "s" in https) and on the Hypertext Transfer Protocol (`HTTP`) .
 
 ## Uniform Resource Locators (URLs)
 
@@ -180,7 +180,7 @@ Where:
     - `host` corresponds to the `Internet Protocol` (IP) address or `hostname` (e.g. `www.example.com`) of a server hosting a resource
     - `userinfo` and `port` are optional and should be avoided in identifiers for data.
 - `path`: denotes the specific location or file on the `host`. It directs client to the resource within the `host`'s directory structure,
-- `query`: optional parameters that provide additional information to the `host`, often used in dynamic web pages to pass data or parameters. In the context resolvable identiers, query components should be avoided,
+- `query`: optional parameters that provide additional information to the `host`, often used in dynamic web pages to pass data or parameters. In the context resolvable identifiers, query components should be avoided,
 - `fragment`: an optional part that identifies a specific portion within the resource, commonly used in longer documents to navigate to a particular section.
 
 
@@ -198,8 +198,8 @@ In FAIR data context, web resources require **unique**, **persistent**, and **re
 - Resolvable Content Identifiers:
   - [`https://linker.bio/hash://sha256/f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d.pdf`](https://linker.bio/hash://sha256/f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d.pdf) (a scientific paper)
   - [`https://archive.softwareheritage.org/api/1/content/sha256:f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d/raw/`](https://archive.softwareheritage.org/api/1/content/sha256:f849c870565f608899f183ca261365dce9c9f1c5441b1c779e0db49df9c2a19d/raw/) (a scientific paper)
-  - [`https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg`](https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg) (a picure of a 🐇 (_Oryctolagus cuniculus_))
-  - [`https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/`](https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/) (a picure of a 🐇 (_Oryctolagus cuniculus_))
+  - [`https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg`](https://linker.bio/hash://sha1/86fa30f32d9c557ea5d2a768e9c3595d3abb17a2.jpg) (a picture of a 🐇 (_Oryctolagus cuniculus_))
+  - [`https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/`](https://archive.softwareheritage.org/api/1/content/sha256:f5a0035e4c0c4daf355fdaada9035ba65f4855c74a30f82566e4b342e5a724d5/raw/) (a picture of a 🐇 (_Oryctolagus cuniculus_))
 
 - Resolvable globally unique identifier (GUID) identifier:
 
@@ -227,7 +227,7 @@ To understand the notion of PURL, one needs to first get familiar with the notio
 
 Identifier resolution is often enabled through `indirection` mechanism in which the process of identifying and locating a digital object involves an intermediate step to ensure persistence and reliability over time. In this context, `indirection` means introducing an additional layer or reference that allows for flexibility in managing the actual location or characteristics of the identified object.
 
-This process can be breakdonw in the following steps:
+This process can be breakdown in the following steps:
 
 1. **Identifier Resolution**: this is the process of `mapping an identifier` (such as a UUID or hash code) to the actual digital object it represents. In the context of data and digital resources, identifier resolution is crucial for finding and accessing the right information.
 2. **Enabling Persistence**: persistence in this context refers to the ability of the identifier to remain valid and associated with the same digital object over an extended period. Enabling persistence ensures that even if the object is moved, modified, or its location changes, the identifier remains functional and reliably points to the correct resource.
@@ -249,7 +249,7 @@ Common implementations of indirection in identifier resolution include the use o
 
 - [Bioregistry](https://bioregistry.io/): is a **Resolution Service**, developed in a [GitHub repository](https://github.com/biopragmatics/bioregistry). Like [Identifiers.org](https://identifiers.org/) it has a registry, but also a registry of registries, and it imports data from Identifiers.org and [Name-to-Things](https://n2t.net/) but extends beyond identifiers for things but also supports, for example, ontologies. As a community effort, new namespace prefixes and their identifier patterns can be registered via [GitHub issues](https://github.com/biopragmatics/bioregistry/issues/new/choose). Compact identifiers are supported and the URL https://bioregistry.io/ADW:Lycalopex_vetulus resolves to the [Animal Diversity Web](https://animaldiversity.org) (ADW) page [https://animaldiversity.org/accounts/Lycalopex_vetulus/](https://animaldiversity.org/accounts/Lycalopex_vetulus/). Bioregistry provides an API to query the registry itself.
 - [linker.bio](https://linker.bio): is an example of a content identifier resolver. Linker.bio uses Preston, a biodiversity data tracker, {cite:t}`elliott2020,elliott2023` to redirect content identifiers using a URL scheme: https://linker.bio/hash://[hashtype]/[contentid] with examples available in section "Resolvable Identifiers." Linker.bio acts as a gateway to existing infrastructures like: [DataVerse](https://dataverse.org), [DataOne](https://dataone.org), [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page), [Zenodo](https://zenodo.org), [Software Heritage Library](https://softwareheritage.org). Anyone with the skills to setup a webserver can run their own independent content-based resolver, so copies of linker.bio can be deployed when needed.
- 
+
 ## Conclusions
 
 This section has provided an overview of `globally unique and persistent identifier`{cite}`McMurry2017`, i.e. `FAIR principle F1`.
