@@ -8,7 +8,7 @@ GloBI aggregates data from various sources, including scientific literature, fie
 
 GloBI continuously scans existing data infrastructures and registries and tracks the biotic interactions data they make available. Found biotic interaction data are then resolved and integrated. So, rather than being a giant centralized repository of biotic interaction data, GloBI is more of a search index that helps to find existing biotic interaction datasets in their native cyber-habitat. For more information about how GloBI works, please visit the [Data Integration Process](https://www.globalbioticinteractions.org/process) page.
 
-There many different forms to have a dataset indexed by GloBI, however, in this guide we will cover the method which covers the [FAIRification process](fairification) described in this guide.
+There are many different forms to have a dataset indexed by GloBI, however, in this guide we will cover the method which covers the [FAIRification process](fairification) described in this guide.
 
 ## Creating a GitHub repository
 
@@ -19,7 +19,7 @@ You need a GitHub account to create repositories. Go to [Signup page](https://gi
 ```
 
 1. [Log in](https://github.com/login) into the GitHub platform using your account credentials.
-1. Create a new GitHub repository by cloniong the [GloBI template repository](https://github.com/globalbioticinteractions/template-dataset/generate)
+1. Create a new GitHub repository by cloning the [GloBI template repository](https://github.com/globalbioticinteractions/template-dataset/generate)
 2. Give a name to the repository. The repository will be created at your account namespace (**Owner**).
 3. Choose if you want to make your repository **public** or **private**. **Private** repositories **are not** accessible by others and can not be indexed by GloBI. You can choose to initially create a **private** repository and when you are ready you can make it **public**.
 4. Click the `Create repository` button.
@@ -32,7 +32,7 @@ While GloBI does not require a metadata description using EML (Ecological Metada
 EML documentation can be generated using the [ezeml](https://ezeml.edirepository.org/) tool as described below:
 
 1. First create a new account in [ezeml](https://ezeml.edirepository.org/eml/)
-2. Create a new EML document and add all information for the **mininum set of terms for biotic interactions** datasets (optionally also include the **RECOMMENDED terms to improve reusability of datasets**) described in the [Metadata standardization](metadata-std).
+2. Create a new EML document and add all information for the **minimum set of terms for biotic interactions** datasets (optionally also include the **RECOMMENDED terms to improve reusability of datasets**) described in the [Metadata standardization](metadata-std).
 3. Fill the description of `data table` and `columns mapping` (see [Documenting data and column mapping](eml-dt-mapping)).
 3. Export the EML file using the menu:  `Import/Export`->`Download EML file (XML)`.
 4. Save the EML (XML) file locally.
@@ -50,10 +50,10 @@ The direct URL of a file can be generate from GitHub using the `Raw` button in t
 ---
 name: raw
 ---
-Generate direct URL for a file in GitHub by clickin in the `Raw` button.
+Generate direct URL for a file in GitHub by clicking in the `Raw` button.
 ```
 
-The original data table with biotic interaction records must be uploaded using CSV file and then the columns mapping can be created using [GloBI vocabulary](https://github.com/globalbioticinteractions/template-dataset?tab=readme-ov-file#data-format-and-dictionary) as `attribute name`. First you need to load a text-delimited file into `ezml` ({numref}`ezeml-data-table`). After successfull upload the file, the original columns can be mapped to `GloBI vocabulary` and Darwin Core standard.
+The original data table with biotic interaction records must be uploaded using CSV file and then the columns mapping can be created using [GloBI vocabulary](https://github.com/globalbioticinteractions/template-dataset?tab=readme-ov-file#data-format-and-dictionary) as `attribute name`. First you need to load a text-delimited file into `ezml` ({numref}`ezeml-data-table`). After successful upload the file, the original columns can be mapped to `GloBI vocabulary` and Darwin Core standard.
 
 To edit the columns mapping click on `Edit Column Properties` button in the `Data Table` page ({numref}`ezeml-data-table`).
 
@@ -65,7 +65,7 @@ Loading a `data table` in `ezeml` tool.
 ```
 
 
-In the `Columns` page, select the column which you want to map and click on the `Edit Properties` button ({numref}`ezeml-columns`).
+In the `Columns Properties` page, select the column which you want to map and click on the `Edit Properties` button ({numref}`ezeml-columns`).
 
 ```{figure} ../../images/ezeml-columns.png
 ---
@@ -74,15 +74,15 @@ name: ezeml-columns
 `Columns Properties` page in `ezeml` tool. To edit the mapping of a specific column click on `Edit Properties` button.
 ```
 
-In the column properties page you MUST fill the fields: `Name` and `Definiion` as following ({numref}`ezeml-mapping`):
-- `Name` with a term from the `GloBI vocabulary` (if available)
-- `Definition` with the URL (ID) of the term in the DwC standard or any other standard/ontology in order to provide a machine readble definition for the column
+In the `column properties` page you MUST fill the fields: `Name` and `Definition` as following ({numref}`ezeml-mapping`):
+- `Name` with a term from the `GloBI vocabulary` if available. You may use terms from other standards or vocabularies when `GloBI vocabulary` lacks a term, or alternatively, you can provided your own definition for the column
+- `Definition` with the URL (ID) of the term in the DwC standard or any other standard/ontology in order to provide a machine readable definition for the column
 
 ```{figure} ../../images/ezeml-mapping.png
 ---
 name: ezeml-mapping
 ---
-Column mapping to [Globi vocabulary](https://github.com/globalbioticinteractions/template-dataset?tab=readme-ov-file#data-format-and-dictionary) and Darwin Core standard. The fields `Name` and `Definition` MUST be provided.
+Column mapping to [GloBI vocabulary](https://github.com/globalbioticinteractions/template-dataset?tab=readme-ov-file#data-format-and-dictionary) and Darwin Core standard. The fields `Name` and `Definition` MUST be provided.
 ```
 
 When all columns have been mapped to `GloBI vocabulary` or to DwC and PPI, continue with metadata description, exporting the EML (XML) file at the end.
@@ -91,23 +91,33 @@ When all columns have been mapped to `GloBI vocabulary` or to DwC and PPI, conti
 ## Preparing the GitHub repository for GloBI
 
 
-The new created repository will looks like shown in Figure X. There are four files that you need to edit/create to enable GloBI to find and index your data:
+The new created repository will look like shown in {numref}`github-globi-template`.
 
-1. **README.md**: a markdown file where you can freely describe your dataset in human readable form.
-2. **interactions.tsv**: the biotic interactions records in TSV file format. You can choose to delete this file or using another text format (e.g. CSV, TXT).
-3. **globi.json**: this file guides GloBI in how to find, read and process the (meta)data of your dataset, but since we are using the EML to describe the dataset this file can be renamed to `globi.json.disabled`. Renaming the file will still enable GloBI to find the repository but it will use the `eml.xml` file instead of the `globi.json` to process the interaction data.
-4. **eml.xml**: upload the EML (XML) file created using the [ezml](https://ezeml.edirepository.org/eml/) tool to the repository. **NOTE:** make sure that the `eml.xml` file includes the `Data Table` description, otherwise GloBI will not be able to process the dataset (see [Documenting data and column mapping](eml-dt-mapping)).
+```{figure} ../../images/github-globi-template.png
+---
+name:  github-globi-template
+---
+File structure of a new created GitHub repository from GloBI's template
+```
+
+
+There are four files that you need to edit/create to enable GloBI to find and index your data:
+
+1. **``README.md``**: a markdown file where you can freely describe your dataset in human readable form.
+2. **``interactions.tsv``**: the biotic interactions records in TSV file format. You can choose to delete this file and use another text format file (e.g. CSV, TXT).
+3. **``globi.json``**: this file guides GloBI in how to find, read and process the (meta)data of your dataset, but since we are using the EML to describe the dataset this file can be renamed to `globi.json.disabled`. Renaming the file will still enable GloBI to find the repository but it will use the `eml.xml` file instead of the `globi.json` to process the interaction data.
+4. **``eml.xml``**: upload the EML (XML) file created using the [ezml](https://ezeml.edirepository.org/eml/) tool to the repository. **NOTE:** make sure that the `eml.xml` file includes the `Data Table` description, otherwise GloBI will not be able to process the dataset (see [Documenting data and column mapping](eml-dt-mapping)).
 
 ## Persistent Identifier
 
 
-GloBI provided PID using [Content Hash Idenfiers](content-hash-identifiers) for all datasets published in the platform. For example the URL [https://github.com/globalbioticinteractions/calvalheiro2023/archive/20cc192510e0abb7c982a50502354fa74d504cfa.zip](https://github.com/globalbioticinteractions/calvalheiro2023/archive/20cc192510e0abb7c982a50502354fa74d504cfa.zip) serves as a PID for the datasets hosted at [https://github.com/globalbioticinteractions/carvalheiro2023](https://github.com/globalbioticinteractions/carvalheiro2023).
+GloBI provided PUID using [Content Hash Identifiers](content-hash-identifiers) for all datasets published in the platform. For example the SHA256 hash `hash://sha256/20cc192510e0abb7c982a50502354fa74d504cfa` serves as a PID for the datasets hosted at [https://github.com/globalbioticinteractions/carvalheiro2023](https://github.com/globalbioticinteractions/carvalheiro2023).
 
-Altenrativelly, GloBI can generate `DOI` by uploading a copy of the dataset from GitHub into [Zenodo](https://zenodo.org). To create a `PID` from GitHub you MUST create a `realease` of your repository ({numref}`pid-release`), after creating a `release` the generated data package will be uploaded to Zenodo and a DOI will be also generated.
+Alteratively, GloBI can generate `DOI` by uploading a copy of the dataset from GitHub into [Zenodo](https://zenodo.org). To create a `PID` from GitHub you MUST create a `release` of your repository ({numref}`pid-release`), after creating a `release` the generated data package will be uploaded to Zenodo and a DOI will be also generated.
 
 ```{figure} ../../images/release.png
 ---
 name: pid-release
 ---
-Generate a `release` from GitHub repository in order to get a `DOI` from `Zendo`.
+Generate a `release` from GitHub repository in order to get a `DOI` from `Zenodo`.
 ```

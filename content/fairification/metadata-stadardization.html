@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Metadata stadardization &#8212; Agricultural Biodiversity  Best Practice and Guidelines for Data FAIRification</title>
+    <title>Metadata standardization &#8212; Agricultural Biodiversity  Best Practice and Guidelines for Data FAIRification</title>
   
   
   
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../introduction/FAIR-principles.html">The FAIR Principles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/pids.html">Persistent Unique Identifiers</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../introduction/fairification.html">FAIRification process</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Metadata stadardization</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Metadata standardization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data-standardization.html">Data Standardization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assign-license.html">License Assignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="publishing.html">Publishing data</a></li>
@@ -390,7 +390,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Metadata stadardization</h1>
+    <h1>Metadata standardization</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,7 +403,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fair-principles-met">FAIR Principles Met</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ecological-metadata-language">The Ecological Metadata Language</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mininum-set-of-terms-for-biotic-interactions">The mininum set of terms for biotic interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-minimum-set-of-terms-for-biotic-interactions">The minimum set of terms for biotic interactions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
@@ -417,8 +417,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="metadata-stadardization">
-<span id="metadata-std"></span><h1>Metadata stadardization<a class="headerlink" href="#metadata-stadardization" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="metadata-standardization">
+<span id="metadata-std"></span><h1>Metadata standardization<a class="headerlink" href="#metadata-standardization" title="Permalink to this heading">#</a></h1>
 <section id="fair-principles-met">
 <h2>FAIR Principles Met<a class="headerlink" href="#fair-principles-met" title="Permalink to this heading">#</a></h2>
 <div class="interoperable admonition">
@@ -437,11 +437,11 @@ document.write(`
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Metadata standards refer to established guidelines or specifications defining how metadata, which provides information about data, is structured, formatted, and described. These standards ensure consistency and interoperability in describing data elements, aiding in their organization, discovery, and management. They outline rules for creating, storing, and managing metadata to ensure uniformity and comprehension across different systems, making it easier to exchange, locate, and interpret various types of data.</p>
-<p>The are different types of metadata which can overlap or complement each other, and their application depends on the specific needs of data management, retrieval, and usage within different contexts;</p>
+<p>There are different types of metadata which can overlap or complement each other, and their application depends on the specific needs of data management, retrieval, and usage within different contexts;</p>
 <ul class="simple">
 <li><p><strong>Descriptive Metadata</strong>: this type describes the content and context of the data, providing information such as titles, abstracts, keywords, and summaries that help users understand what the data is about.</p></li>
 <li><p><strong>Structural Metadata</strong>: it outlines how the components of a dataset are organized, including information about relationships, hierarchy, and sequence of data elements. Structural metadata might describe tables, fields, and their relationships.</p></li>
-<li><p><strong>Administrative Metadata</strong>: it includes details about ownership, access rights, versioning, provenance (data origin), creation and modification dates, and other aspects relevant to data governance and stewardship.</p></li>
+<li><p><strong>Administrative Metadata</strong>: it includes details about ownership, access rights, versioning, <a class="reference internal" href="../glossary/glossary.html#term-Provenance"><span class="xref std std-term">provenance</span></a> (data origin), creation and modification dates, and other aspects relevant to data governance and stewardship.</p></li>
 <li><p><strong>Technical Metadata</strong>: this type encompasses technical details about the data, such as file formats, sizes, data types, encoding schemes, software used to create or modify the data, and technical specifications necessary for data processing or interpretation.</p></li>
 <li><p><strong>Rights Metadata</strong>: Rights metadata contains information regarding intellectual property rights, licensing, restrictions, and permissions associated with the data, ensuring compliance with legal and ethical considerations.</p></li>
 </ul>
@@ -451,18 +451,18 @@ document.write(`
 <p>The <a class="reference external" href="https://eml.ecoinformatics.org/">Ecological Metadata Language (EML)</a> <span id="id1">[<a class="reference internal" href="#id15" title="Matthew Jones, Margaret O’Brien, Bryce Mecum, Carl Boettiger, Mark Schildhauer, Mitchell Maier, Timothy Whiteaker, Stevan Earl, and Steven Chong. Ecological metadata language version 2.2.0. KNB Data Repository, 2019. URL: https://eml.ecoinformatics.org, doi:10.5063/f11834t2.">JOBrienM+19</a>]</span>, offers a comprehensive vocabulary and a user-friendly XML markup syntax designed to document ecological data. Widely adopted within the earth and environmental sciences and increasingly utilized in various research fields, EML remains a community-driven standard. Its continual evolution caters to researchers seeking open documentation, preservation, and data sharing. EML comprises modules covering data package identification and citation, delineation of spatial, temporal, taxonomic, and thematic data extents, description of research methodologies, intricate data structure and content delineation, and precise data annotation using semantic vocabularies.</p>
 <p>The EML project is an open source, community oriented project dedicated to providing a high-quality metadata specification for describing data relevant to diverse disciplines that involve observational research like ecology, earth, and environmental science.</p>
 <p>It has been used by biodiversity community as metadata standard, including the <a class="reference external" href="https://gbif.org">Global Biodiversity Information Facility (GBIF)</a> and <a class="reference external" href="https://dataone.org">DataONE</a> (a network of data repositories).</p>
-<p>The EML standard contains a large number of terms providing the elements to a rich description of datasets, their contents, strucuture and semantics. However, we can enumerate a minimum set of terms which MUST be present in the metadata of the biotic interactions datasets to meet the FAIR principles.</p>
+<p>The EML standard contains a large number of terms providing the elements to a rich description of datasets, their contents, structure and semantics. However, we can enumerate a minimum set of terms which MUST be present in the metadata of the biotic interactions datasets to meet the FAIR principles.</p>
 </section>
-<section id="the-mininum-set-of-terms-for-biotic-interactions">
-<h2>The mininum set of terms for biotic interactions<a class="headerlink" href="#the-mininum-set-of-terms-for-biotic-interactions" title="Permalink to this heading">#</a></h2>
-<p>In the metadata of biotic interactions datasets the follow term MUST be present:</p>
+<section id="the-minimum-set-of-terms-for-biotic-interactions">
+<h2>The minimum set of terms for biotic interactions<a class="headerlink" href="#the-minimum-set-of-terms-for-biotic-interactions" title="Permalink to this heading">#</a></h2>
+<p>In the metadata of biotic interactions datasets the following term MUST be present:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: a description of the resource that is being documented that is long enough to differentiate it from other similar resources.</p></li>
 <li><p>dataset <code class="docutils literal notranslate"><span class="pre">creators</span></code>:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">individualName</span></code>: the full name of the people who created this resource,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">organizationName</span></code>: the full name of the organizations who created this resource,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">eletronicMailAddress</span></code>: the email addresses of the people who created this resource,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">electronicMailAddress</span></code>: the email addresses of the people who created this resource,</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">keywordSet</span></code>: keyword information that describes the resource,</p></li>
@@ -473,25 +473,25 @@ document.write(`
 </ul>
 </li>
 </ul>
-<p>The follow metadata elements are RECOMMENDED to be include in order to improve reusability of datasets:</p>
+<p>The following metadata elements are RECOMMENDED to be included in order to improve reusability of datasets:</p>
 <div class="findable admonition">
 <p class="admonition-title">FAIR PRINCIPLE F2</p>
 <p>(Meta)data include qualified references to other (meta)data</p>
 </div>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">abstract</span></code>: a brief overview of the resource,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">intelectualRights</span></code>: intellectual property rights regarding usage and licensing of this resource,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intellectualRights</span></code>: intellectual property rights regarding usage and licensing of this resource,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">geographicCoverage</span></code>: geographic coverage information.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">temporalCoverage</span></code>: temporal coverage information,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">taxonomicCoverage</span></code>: taxonomic coverage information,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code>: the methods field documents scientific methods used in the collection of this dataset,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code>: documents the scientific methods used in the data collection or generation,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">referencePublication</span></code>: a citation to an additional publication that serves as an important reference for a dataset,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">literatureCited</span></code>: a citation to articles or products which were referenced in the dataset or its associated metadata.</p></li>
 </ul>
 </section>
 <section id="tools">
 <h2>Tools<a class="headerlink" href="#tools" title="Permalink to this heading">#</a></h2>
-<p>Generating EML files using XML or text editors can be complex and unproductive. For that reason, there some tools which cab help the creation of metadata description in EML:</p>
+<p>Generating EML files using XML or text editors can be complex and unproductive. For that reason, there are some tools which can help the creation of metadata description in EML:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://ezeml.edirepository.org/eml/about">ezEML</a>: a form-based online application designed to streamline the creation of metadata in the Ecological Metadata Language (EML).</p></li>
 <li><p><a class="reference external" href="https://github.com/ropensci/eml">EML</a>: Ecological Metadata Language interface for R,</p></li>
@@ -576,7 +576,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fair-principles-met">FAIR Principles Met</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ecological-metadata-language">The Ecological Metadata Language</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mininum-set-of-terms-for-biotic-interactions">The mininum set of terms for biotic interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-minimum-set-of-terms-for-biotic-interactions">The minimum set of terms for biotic interactions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>

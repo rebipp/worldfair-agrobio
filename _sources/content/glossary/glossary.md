@@ -36,13 +36,13 @@ Metadata
     annotation about the data. Different types of metadata exist depending on their function
 
 Ontology
-    a formal representation of a domain of knowledge. A more advanced artefact than a simple controled terminology as relations between entities are captures, concepts can be defined axiomatically and inferences can be made automatically by specialized tools such as reasoners. Ontologies can be used to accomplish tasks such as data entry validation or query expansion.
+    a formal representation of a domain of knowledge. A more advanced artefact than a simple controlled terminology as relations between entities are captures, concepts can be defined axiomatically and inferences can be made automatically by specialized tools such as reasoners. Ontologies can be used to accomplish tasks such as data entry validation or query expansion.
 
 PID
     Persistent Identifier, a long-lasting reference to a document, file, web page, or other object. The term “persistent identifier” is usually used in the context of digital objects that are accessible over the Internet.
 
-Provenance Metadata
-    metadata the aim of which is to provide traceability, audit and trail capability allowing consumers to understand its origin
+Provenance
+    metadata the aim of which is to provide traceability, audit and trail capability allowing consumers to understand the origin of the data
 
 RDA
     The Research Data Alliance is a research community organization started in 2013 by the European Commission, the American National Science Foundation and National Institute of Standards and Technology, and the Australian Department of Innovation.

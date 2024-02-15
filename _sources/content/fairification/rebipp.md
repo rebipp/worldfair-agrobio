@@ -4,7 +4,7 @@ The [Brazilian Network on Plant-Pollinator Interactions](https://db.rebipp.org.b
 
 REBIPP provides a platform to retrieve and publish datasets on interactions between plants and their floral visitors, such as pollinators.
 
-Data publication in REBIPP involves filling data into a spreadhsheet with predefiined format (template). This template includes:
+Data publication in REBIPP involves filling data into a spreadsheet with predefiined format (template). This template includes:
 
 - A sheet for metadata description which follows the EML standard,
 - A sheet for interaction records between plants and animals following the Darwin Core standard,
@@ -14,7 +14,7 @@ General instructions for publishing data into REBIPP can be found at [http://db.
 
 ## The REBIPP Template
 
-In order to simplify (meta)data stadardization REBIPP provides a template spreadsheet with metadata and data sheets.
+In order to simplify (meta)data standardization REBIPP provides a template spreadsheet with metadata and data sheets.
 To create a copy of the template use the link: [https://docs.google.com/spreadsheets/d/1z2mvs6Bm7fE5IhxPRVbh1ieEfKsVKeIiK_mitPqvPJw/copy](https://docs.google.com/spreadsheets/d/1z2mvs6Bm7fE5IhxPRVbh1ieEfKsVKeIiK_mitPqvPJw/copy).
 
 Once you have copied the template, fill the spreadsheet with your data and metadata following the column definitions. **It is not necessary to fill in all columns. Only fill in those for which you have data**.

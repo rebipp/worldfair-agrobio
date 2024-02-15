@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../introduction/FAIR-principles.html">The FAIR Principles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/pids.html">Persistent Unique Identifiers</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../introduction/fairification.html">FAIRification process</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="metadata-stadardization.html">Metadata stadardization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata-stadardization.html">Metadata standardization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data-standardization.html">Data Standardization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assign-license.html">License Assignment</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Publishing data</a></li>
@@ -426,7 +426,7 @@ document.write(`
 </div>
 <div class="accessible admonition">
 <p class="admonition-title">FAIR PRINCIPLE A1</p>
-<p>(Meta)data are retrievable by their identifier using a standardised communication protocol</p>
+<p>(Meta)data are retrievable by their identifier using a standardized communication protocol</p>
 </div>
 <div class="accessible admonition">
 <p class="admonition-title">FAIR PRINCIPLE A2</p>
@@ -436,7 +436,7 @@ document.write(`
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Deploying and publishing data refers to the process of making data available, accessible, and usable within a particular system. It involves taking raw data and after transformations, which involves (meta)data standardization, data annotation and license assignment, integrating it into a platform where it can be utilized effectively.</p>
-<p>Depending of the platform choose to publishing data, the deployment process may differ and involve differet tools and steps for data preparation. Regarding biotic interactions data, there are some platforms which are best suitable to integrade such data. Each one of these platforms have their own methods for data publishing, which are described in the <code class="docutils literal notranslate"><span class="pre">FAIRification</span> <span class="pre">Process</span></code> chapter.</p>
+<p>Depending of the platform choose to publishing data, the deployment process may differ and involve different tools and steps for data preparation. Regarding biotic interactions data, there are some platforms which are best suitable to integrate such data. Each one of these platforms have their own methods for data publishing, which are described in the <code class="docutils literal notranslate"><span class="pre">FAIRification</span> <span class="pre">Process</span></code> chapter.</p>
 <p>After choosing the platform where you want to publish your dataset, you can follow one of the guides given in <code class="docutils literal notranslate"><span class="pre">FAIRification</span> <span class="pre">Process</span></code> chapter to learn how to prepare and publish your own dataset in the choose platform.</p>
 </section>
 <section id="global-biotic-interactions-globi">
@@ -444,13 +444,13 @@ document.write(`
 <p>The <a class="reference external" href="http://globalbioticinteractions.org/">Global Biotic Interactions</a> is an open-access platform that focuses on indexing and providing access to data about biotic interactions. These interactions can range from predation, parasitism, mutualism, to various other ecological relationships between organisms.</p>
 <p>GloBI aggregates data from various sources, including scientific literature, field observations, and existing datasets, and stores this information into a unified format. This standardized data enables researchers, ecologists, and anyone interested in biodiversity to access and analyze data about biotic interactions more easily.</p>
 <p>GloBI continuously scans existing data infrastructures and registries and tracks the biotic interactions data they make available. Found biotic interaction data are then resolved and integrated. So, rather than being a giant centralized repository of biotic interaction data, GloBI is more of a search index that helps to find existing biotic interaction datasets in their native cyber-habitat. For more information about how GloBI works, please visit the <a class="reference external" href="https://www.globalbioticinteractions.org/process">Data Integration Process</a> page.</p>
-<p>There many different forms to have a dataset indexed by GloBI, however, in this guide we will cover the method which covers the <a class="reference internal" href="../introduction/fairification.html#fairification"><span class="std std-ref">FAIRification process</span></a> described in this guide.</p>
+<p>There are many different forms to have a dataset indexed by GloBI, however, in this guide we will cover the method which covers the <a class="reference internal" href="../introduction/fairification.html#fairification"><span class="std std-ref">FAIRification process</span></a> described in this guide.</p>
 </section>
 <section id="brazilian-network-on-plant-pollinator-interactions-rebipp">
 <h2>Brazilian Network on Plant-Pollinator Interactions (REBIPP)<a class="headerlink" href="#brazilian-network-on-plant-pollinator-interactions-rebipp" title="Permalink to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://db.rebipp.org.br">Brazilian Network on Plant-Pollinator Interactions</a> (REBIPP) is a collaborative network of experts in Pollination Biology who study plant-pollinator interactions in their various dimensions and aims to encourage the development of scientific and educational activities in the area.</p>
 <p>REBIPP provides a platform to retrieve and publish datasets on interactions between plants and their floral visitors, such as pollinators.</p>
-<p>Data publication in REBIPP involves filling data into a spreadhsheet with predefiined format (template). This template includes:</p>
+<p>Data publication in REBIPP involves filling data into a spreadsheet with predefined format (template). This template includes:</p>
 <ul class="simple">
 <li><p>A sheet for metadata description which follows the EML standard,</p></li>
 <li><p>A sheet for interaction records between plants and animals following the Darwin Core standard,</p></li>
@@ -464,8 +464,8 @@ document.write(`
 <section id="global-biodiversity-information-facility-gbif">
 <h2>Global Biodiversity Information Facility (GBIF)<a class="headerlink" href="#global-biodiversity-information-facility-gbif" title="Permalink to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://gbif.org">Global Biodiversity Information Facility</a> is an international network and open-access data infrastructure that aims to facilitate free and open access to biodiversity data from around the world.</p>
-<p>For data publishing GBIF provides a tool called <a class="reference external" href="https://www.gbif.org/ipt">Integrate Publishing Toolkit</a> (IPT) which after installed into a GBIF newtwork node, it can share biodiversity data stored in node’s databases or dataset created by users who have access to the IPT web interface.</p>
-<p>Biotic interactions data can be published in GBIF, even though GBIF is not indexing this kind of that at the moment. It means that, despite it is possible to find and access the published datasets, GBIF does not offer a search mechanism for biotic interactions. It does not fully acccomplishes with the <a class="reference internal" href="../introduction/FAIR-principles.html#findable-f4"><span class="std std-ref">FAIR Principle F4</span></a>.</p>
+<p>For data publishing GBIF provides a tool called <a class="reference external" href="https://www.gbif.org/ipt">Integrate Publishing Toolkit</a> (IPT) which after installed into a GBIF network node, it can share biodiversity data stored in node’s databases or dataset created by users who have access to the IPT web interface.</p>
+<p>Biotic interactions data can be published in GBIF, even though GBIF is not indexing this kind of data at the moment. It means that, despite it is possible to find and access the published datasets, GBIF does not offer a search mechanism for biotic interactions. It does not fully accomplishes with the <a class="reference internal" href="../introduction/FAIR-principles.html#findable-f4"><span class="std std-ref">FAIR Principle F4</span></a>.</p>
 <div class="attention admonition">
 <p class="admonition-title">Attention</p>
 <p>Publishing data through IPT requires that you have access (login and password) to a IPT installation handled by one of the GBIF nodes.</p>
