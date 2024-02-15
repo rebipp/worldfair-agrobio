@@ -33,7 +33,7 @@ Licensing
     the process of assigning a license, i.e a formal, legally binding document which articulates the condition of use of an entity
 
 Metadata
-    annotation about the data. Different types of metadata exit depending on their function
+    annotation about the data. Different types of metadata exist depending on their function
 
 Ontology
     a formal representation of a domain of knowledge. A more advanced artefact than a simple controled terminology as relations between entities are captures, concepts can be defined axiomatically and inferences can be made automatically by specialized tools such as reasoners. Ontologies can be used to accomplish tasks such as data entry validation or query expansion.
