@@ -1,33 +1,29 @@
 [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://worldfair-agrobio.gitpages.com)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10665401.svg)](https://doi.org/10.5281/zenodo.10665401)
 
-# Agricultural Biodiversity  Best Practice and Guidelines for Data FAIRification
+# Guidelines and Recommendations for Publishing Agricultural-related pollinator data
 
-Agricultural Biodiversity Standards, Best Practice and Guidelines Recommendations.
+## WorldFAIR Initiative
 
-## Usage
+The WorldFAIR project, led by CODATA, the Committee on Data of the International Science Council (ISC), and partnered with Research Data Alliance(RDA), and others, focuses on advancing the FAIR principles across 11 disciplinary and cross-disciplinary case studies. It aims to enhance the interoperability and reusability of digital research objects, emphasizing the creation of interoperability frameworks for each case study and research domain.
 
-### Building the book
+This initiative seeks to provide recommendations, interoperability frameworks, and guidelines for assessing FAIR data. With CODATA and RDA leading the effort, the project collaborates with several authoritative international bodies and institutions with global reach, ensuring broad implementation and impactful outcomes.
 
-If you'd like to develop and/or build the Agricultural Biodiversity  Best Practice and Guidelines for Data FAIRification book, you should:
+Starting in June 2022, the project concentrates on case studies spanning various scientific fields and cultural heritage sectors. By tailoring FAIR Implementation Profiles to each discipline, it aims to develop comprehensive insights into best practices and emerging solutions for FAIR data within these domains.
 
-1. Clone this repository
-2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-3. (Optional) Edit the books source files located in the `worldfair-agrobio/` directory
-4. Run `jupyter-book clean worldfair-agrobio/` to remove any existing builds
-5. Run `jupyter-book build worldfair-agrobio/`
-
-A fully-rendered HTML version of the book will be built in `worldfair-agrobio/_build/html/`.
-
-### Hosting the book
-
-Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
-
-For GitHub and GitLab deployment specifically, the [cookiecutter-jupyter-book](https://github.com/executablebooks/cookiecutter-jupyter-book) includes templates for, and information about, optional continuous integration (CI) workflow files to help easily and automatically deploy books online with GitHub or GitLab. For example, if you chose `github` for the `include_ci` cookiecutter option, your book template was created with a GitHub actions workflow file that, once pushed to GitHub, automatically renders and pushes your book to the `gh-pages` branch of your repo and hosts it on GitHub Pages when a push or pull request is made to the main branch.
+This guide outlines projects, tools, and best practices for managing plant-pollinator interactions data, intending to create guidelines aligned with FAIR principles. Examining methods and platforms used for data sharing, it identifies opportunities for enhancing data mobilization and improving current practices. This work aims to enhance data interoperability for plant-pollinator interactions, aligning with broader efforts to develop a Cross-Domain Interoperability Framework in the WorldFAIR project.
 
 ## Contributors
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/zedomel/worldfair-agrobio/graphs/contributors).
+We welcome and recognize all contributions.
+
+- [Debora Pignatari Drucker](https://orcid.org/0000-0003-4177-1322), Embrapa Agricultura Digital, Brazil
+- [Filipi Miranda Soares](https://www.wikidata.org/wiki/Q111524976), Universidade de São Paulo, Brazil
+- [Jeff Ollerton](https://orcid.org/0000-0002-0887-8235), University of Northampton (UK) and Kunming Institute of Botany (China)
+- [Jorrit H. Poelen](https://orcid.org/0000-0003-3138-4118), Global Biotic Interactions, United States
+- [José Augusto Salim](https://orcid.org/0000-0002-8675-7068), University of Campinas, Brazil
+- [Rocío A. González-Vaquero](https://orcid.org/0000-0001-7754-1815), Facultad de Agronomía, Universidad de Buenos Aires, Argentina
 
 ## Credits
 
-This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
+This guide is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
