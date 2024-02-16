@@ -1,6 +1,11 @@
 [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://worldfair-agrobio.gitpages.com)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10665401.svg)](https://doi.org/10.5281/zenodo.10665401)
 
+<div align="center">
+  <img src="worldfair-agrobio/images/worldfair-logo.png" width="250px"/>
+  <img src="worldfair-agrobio/images/funded_EN.png" width="250px"/>
+</div>
+
 # Guidelines and Recommendations for Publishing Agricultural-related pollinator data
 
 ## WorldFAIR Initiative
